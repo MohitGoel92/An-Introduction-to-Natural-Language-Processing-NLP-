@@ -70,4 +70,35 @@ Data is constantly being generated, for instance, social media (Twitter, Faceboo
     - Analysing the data and providing assessments of the customers creditworthiness.
     - Banks use trained datasets that are prelabelled indicating the level of risk for a customer.
 - Hiring and Recruitment: NLP is changing the way HR operate. Traditionally, recruiters need to review thousands of CV's for a single job post which can takes hours and hours of navigating emails. NLP can support this process by analysing candidate reports and scoring them against standard datasets. This provides indications for top candidates, removing bias and increasing diversity.
-- Healthcare: 
+- Healthcare: Medical professionals and institutions now communicate with patients electronically. For example via email, online forms with symptoms and online video consultations. Despite the already overwhelming amount of medical terms and medications pharmicists have to keep track of, in a global world language barriers add more complexity to this hurdle. NLP has been proven to assist in the healthcare sector. For instance, researchers from the UNiversity of Alabama found that NLP identification of reportable cancer cases was 22.6% more accurate than the manual review of electronic health records (EHR). NLP helps extracts useful data from EHRs and even give EHRs indications and alters to prevent human errors. In other words, NLP helps with increasing acccuracy.
+
+NLP uses a variety of data including:
+- Structure data:
+    - Data that has been organised and includes a clear data model.
+    - Data in relational databases that represents table with rows and columns (SQL).
+    - Robust, easy to manage and control.
+    - Less flexible as it follows a particular data model, and less scalable.
+    - According to industry estimates, only 21% of the available data is present in structured form.
+- Semi-structured data:
+    - Data has a level of organisation and structure that makes easy analysis, or gives indications how to analyse.
+    - An XML format is an example of this category.
+    - More flexible than structured data and easy to scale.
+    - There is a schema indication, but users have the freedom to alter it.
+- Unstructured data:
+    - Data is not organised and there is no predefined data model.
+    - Different formats include text files, such as Word documents, logs and PDF reports.
+    - Absence of schema makes it scalable and flexible.
+    - Difficult to analyse and process as it's based on character based analysis.
+    - Mining unstructured data provides new insights and uncovers unknown information hidden in data. We can detect patterns and trends, and relationships and connection of unrelated data.
+
+NLP is about user generated information:
+- Emails
+- Word processing documents
+- Presentations
+- Logs and reports
+- Audio and video files
+- Social media posts
+
+**NLTK:** The Natural Language Toolkit has the most common tools for NLP. Using NLTK we can build Python programs to work with human language data. Huge collection of datasets and corpra and lexical resources.
+
+**Note:** We will be using Google Colaboratory (Colab) for running Python programs.
