@@ -176,3 +176,88 @@ print(mydata)
 print(mydata['ciudad'])
 ```
 
+The output to the below will be 34
+
+```
+dict1 = {"name":"Mary", "age":34, "city":"London"}
+print(dict1["age"])
+```
+
+**Python Functions:** A function is a block of code that we call in programs and use it to run modular and repeated tasks.
+
+```
+def function(x):
+  return x ** 2 # A number to the power of 2
+print(function(-9)) # we must call the function name, which is function
+```
+
+A function returns a value back to the user, and the user decides how to further proceed with this. A function that does not return a value is called void.
+
+```
+# Function for counting the number of characters in a string
+
+def cc(strings):
+  counter=0
+  for x in strings:
+    counter+=1
+  print(counter)
+
+cc("Message Mensaje Letter Carta")
+```
+
+```
+# The function below returns a string as a list of words
+
+text = "She sells sea shells on the sea shore"
+
+def splitter(atext):
+  return atext.split()
+
+print(splitter(text))
+```
+
+```
+# The function below counts how many instances a word exists in a given phrase. After, we will call the function to lookup the number of instances the word sea exists in the text variable.
+
+text = "She sells sea shells on the sea shore"
+
+def count_words(atext,lookup):
+  counter_lookup=0
+  for x in splitter(atext):
+    if x == lookup:
+      counter_lookup+=1
+  return counter_lookup
+
+print(count_words(text,"sea"))
+
+# In our case, the output will be 2.
+```
+
+In the below, we are using a "Boolean" variable (True or False) as a return value. The below will print True.
+
+```
+text = "She sells sea shells on the sea shore"
+
+def search_word(atext,lookup):
+  for x in splitter(atext):
+    if x == lookup:
+      return True
+  return False
+
+print(search_word(text,"sea"))
+```
+
+**Python Tuples:** A tuple is a collection which is ordered and unchangeable. In Python, tuples are written with round brackets.
+
+```
+tuple = ("uno","dos","tres","cuatro")
+print(tuple)
+```
+
+**Python Sets:** Sets are unordered and unindexed, with elements that are unique. Therefore, any repeated elements will only be printed out once. Elements in the set can be changed, unlike tuples. In Python, sets are written with curl brackets.
+
+``
+set = {"Gris","Azul","Rojo"}
+print(set)
+```
+
