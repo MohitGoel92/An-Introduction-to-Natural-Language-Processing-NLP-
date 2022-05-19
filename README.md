@@ -217,7 +217,8 @@ print(splitter(text))
 ```
 
 ```
-# The function below counts how many instances a word exists in a given phrase. After, we will call the function to lookup the number of instances the word sea exists in the text variable.
+# The function below counts how many instances a word exists in a given phrase. 
+# After, we will call the function to lookup the number of instances the word sea exists in the text variable.
 
 text = "She sells sea shells on the sea shore"
 
@@ -261,3 +262,25 @@ set = {"Gris","Azul","Rojo"}
 print(set)
 ```
 
+Let us use NLP to create a word frequency program using dictionaires.
+
+```
+corpus = "London is the capital of England . London is also the financial hub . Birmingham is the second largest city in England , after London ."
+
+# Create an empty dictionary
+
+word_freq = dict()
+
+# Transform the corpus to a string and then split the corpus variable to words
+
+corpus_word = str(corpus).split()
+for x in range(len(corpus_word)):
+  if corpus_word[x] not in word_freq:
+
+# Create a key for each word and a counter as a value, then increase a counter as many times as the word appears in the text.
+
+    word_freq[corpus_word[x]] = 1
+  else:
+    word_freq[corpus_word[x]]+=1
+print(word_freq)
+```
