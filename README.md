@@ -102,3 +102,33 @@ NLP is about user generated information:
 **NLTK:** The Natural Language Toolkit has the most common tools for NLP. Using NLTK we can build Python programs to work with human language data. Huge collection of datasets and corpra and lexical resources.
 
 **Note:** We will be using Google Colaboratory (Colab) for running Python programs.
+
+### Python Refresher
+
+We will quickly refresh our Python skills so we can move on smoothly with this course.
+
+Exercise: Run the code that counts all the cells in the following string, "Romeo and Juliet.".
+
+Solution:
+
+```
+text = """Romeo and Juliet."""
+
+counter = 0
+for x in text:
+    counter = counter + 1 #or we can have counter+=1
+print(counter)
+```
+The below summarises basic Python conditionals:
+
+```
+x = -9
+
+if x>0:
+  print('Positive number')
+elif x<0:
+  print('Negative number')
+else:
+  print('zero')
+```
+
