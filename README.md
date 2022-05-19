@@ -132,3 +132,47 @@ else:
   print('zero')
 ```
 
+Loops help you execute blocks of code repeatedly.
+
+```
+items = ["book","pen","eraser"]
+for x in items:
+  print(x)
+```
+
+```
+i = 0
+while i<5:
+  print(i)
+  i+=1
+```
+
+**Python lists:** A python list is a collection of data that is ordered and changeable, and allows duplicate members.
+
+- Strings in Python are lists of bytes that repesent Unicode characters.
+- The following code represents two ways of creating a text variable in Python. In our cases, both variables are the same.
+
+```
+nameString = "Mary"
+nameArray = ["M", "a", "r", "y"]
+```
+
+The following code creates a list of items and prints the list:
+
+```
+items = ["book","pen","eraser"]
+print(items)
+```
+
+**Python Dictionary:** A dictionary is a collection which is unordered, changeable and indexed. Dictionaries differ from lists primarily in how elements are accessed. List elements are accessed by their position in the list via indexing.
+
+```
+mydata = {
+    "nombre":"Mary",
+    "ciudad":"Londres",
+    "ano": 1992
+}
+print(mydata)
+print(mydata['ciudad'])
+```
+
