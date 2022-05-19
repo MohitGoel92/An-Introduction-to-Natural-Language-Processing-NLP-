@@ -257,7 +257,7 @@ print(tuple)
 
 **Python Sets:** Sets are unordered and unindexed, with elements that are unique. Therefore, any repeated elements will only be printed out once. Elements in the set can be changed, unlike tuples. In Python, sets are written with curl brackets.
 
-``
+```
 set = {"Gris","Azul","Rojo"}
 print(set)
 ```
