@@ -320,10 +320,22 @@ from nltk.book import *
 text1
 ```
 
-For instance, we can look for the context of the word "sense" in the Moby Dick by using the below.
+*Concorance* permits us to see words in context, so we can examine the richness and diversity of a language. For instance, we can look for the context of the word "sense" in the Moby Dick by using the below.
 
 ```
 text1.concordance("sense")
+```
+
+*Similar* extracts words that appear in a similar range of context with the word affection.
+
+```
+text1.similar("affection")
+```
+
+*Collocations* refer to a word or phrase that is often used with another word or phrase, in a way that sounds correct to people.
+
+```
+text1.collocations()
 ```
 
 
