@@ -309,3 +309,13 @@ from nltk.corpus import brown
 brown.words()
 ```
 
+The following code will download a book collection to use as a dataset for learning NLTK. This will output a selection of books for us to use.
+
+```
+from nltk.book import *
+
+# The below will allow us to load Moby Dick by Herman Melville.
+
+text1
+```
+
