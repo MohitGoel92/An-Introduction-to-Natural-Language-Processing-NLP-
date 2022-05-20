@@ -284,3 +284,28 @@ for x in range(len(corpus_word)):
     word_freq[corpus_word[x]]+=1
 print(word_freq)
 ```
+
+**NLTK**
+
+- NLTK comes with many corpora, trained models ... etc
+- In our case, we need to use the word_tokenize Python method, that in turn requires the pre-trained Punkt tokenizer.
+
+```
+import nltk
+nltk.download('punkt')
+sentence = "NLTK for life!"
+tokens = nltk.word_tokenize(sentence)
+
+print(tokens)
+```
+
+The following code installs the NLTK library onto the Colab Notebook. The code will also download a book collection to use as a dataset for learning NLTK.
+
+```
+import nltk
+nltk.download('book')
+
+from nltk.corpus import brown
+brown.words()
+```
+
