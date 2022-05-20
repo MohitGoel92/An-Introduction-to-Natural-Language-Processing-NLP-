@@ -99,7 +99,7 @@ NLP is about user generated information:
 - Audio and video files
 - Social media posts
 
-**NLTK:** The Natural Language Toolkit has the most common tools for NLP. Using NLTK we can build Python programs to work with human language data. Huge collection of datasets and corpra and lexical resources.
+**NLTK:** The Natural Language Toolkit has the most common tools for NLP. Using NLTK we can build Python programs to work with human language data. Huge collection of datasets and corpra and lexical resources. The NLTK library provides us with almost all the tools we need to analyse text.
 
 **Note:** We will be using Google Colaboratory (Colab) for running Python programs.
 
@@ -289,6 +289,7 @@ print(word_freq)
 
 - NLTK comes with many corpora, trained models ... etc
 - In our case, we need to use the word_tokenize Python method, that in turn requires the pre-trained Punkt tokenizer.
+- 
 
 ```
 import nltk
@@ -318,4 +319,11 @@ from nltk.book import *
 
 text1
 ```
+
+For instance, we can look for the context of the word "sense" in the Moby Dick by using the below.
+
+```
+text1.concordance("sense")
+```
+
 
