@@ -76,12 +76,12 @@ Data is constantly being generated, for instance, social media (Twitter, Faceboo
 
 NLP uses a variety of data including:
 
-- Structure data:
+- Structured data:
     - Data that has been organised and includes a clear data model.
-    - Data in relational databases that represents table with rows and columns (SQL).
+    - Data in relational databases that represent a table with rows and columns (SQL).
     - Robust, easy to manage and control.
     - Less flexible as it follows a particular data model, and less scalable.
-    - According to industry estimates, only 21% of the available data is present in structured form.
+    - According to industry estimates, only 21% of the available data is present in a structured form.
 - Semi-structured data:
     - Data has a level of organisation and structure that makes easy analysis, or gives indications how to analyse.
     - An XML format is an example of this category.
