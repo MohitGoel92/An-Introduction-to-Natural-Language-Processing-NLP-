@@ -35,7 +35,7 @@ NLP makes human to machine interactions easy.
 
 Why is NLP important?
 
-- Interpretation and manipulation of language is a kew challenge for modern industries.
+- Interpretation and manipulation of language is a key challenge for modern industries.
 - A lot of text data is generated daily, making automated analysis a key task.
 - Human language understanding NLP tasks for:
   - Reading text
@@ -44,8 +44,9 @@ Why is NLP important?
   - Listening text
 
 Obstacles to NLP
+
 - Exploring the meaning and relationships of languages to cognition and meaning of text was always a challenging task for scientists.
-- Understanding natural language is already a difficult task for humans, let along machines. This is because languages can have a very ambiguous nature. For instance, "You know Tom", and "You know Tom?".
+- Understanding natural language is already a difficult task for humans, let alone machines. This is because languages can have a very ambiguous nature. For instance, "You know Tom", and "You know Tom?".
 - Personal styles and many different ways of expressions. For instance, "OK :)", and "OK :(".
 - Many different languages and colloquial styles.
 
@@ -56,16 +57,17 @@ NLP uses a Corpus as the basis of its analysis.
 **Corpus:** A huge collection of written data. In our case of email classification, these are the emails that are already classified and labelled as spam or ham.
 
 Below is a basic outline of an NLP task:
+
 - Preparing the text data for analysis.
 - Creating word dictionaries of words and frequencies.
 - Feature extraction process.
-- Training a classifier to predict class of new emails.
+- Training a classifier to predict the class of new emails.
 
 Data is constantly being generated, for instance, social media (Twitter, Facebook, Whatsapp ... etc). Common use cases of NLP include:
 
-- Chatbots: Heavily used for businesses such as customer services. If you type in "Hello", the NLP program analysis the text and will reply "Greetings!". NLP is used to map text to meaningful insights capable of responsing to written commands. For instance, typing in a request and the system providing you with the required data.
+- Chatbots: Heavily used for businesses such as customer services. If you type in "Hello", the NLP program analyses the text and will reply "Greetings!". NLP is used to map text to meaningful insights capable of responsing to written commands. For instance, typing in a request and the system providing you with the required data.
 - Sentiment Analysis: Here NLP identifies and classifies the emotions within a text using text analysis methods. For instance, understanding the reviews for a restaurant and whether they are positive or negative.
-- Creditworthiness Assessment: A.I. algorithms analyse text and provide credit scores as predictive analytics for banks. Banks use alternative data sets for scoring potentual borrowers, for instance, social media posts, internet activity, and online behaviour. The takes the below process:
+- Creditworthiness Assessment: A.I. algorithms analyse text and provide credit scores as predictive analytics for banks. Banks use alternative data sets for scoring potential borrowers, for instance, social media posts, internet activity, and online behaviour. This takes the following process:
     - Mining the web for information on potential customers.
     - Analysing the data and providing assessments of the customers creditworthiness.
     - Banks use trained datasets that are prelabelled indicating the level of risk for a customer.
