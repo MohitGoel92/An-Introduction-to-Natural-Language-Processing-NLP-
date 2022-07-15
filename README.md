@@ -65,16 +65,17 @@ Below is a basic outline of an NLP task:
 
 Data is constantly being generated, for instance, social media (Twitter, Facebook, Whatsapp ... etc). Common use cases of NLP include:
 
-- Chatbots: Heavily used for businesses such as customer services. If you type in "Hello", the NLP program analyses the text and will reply "Greetings!". NLP is used to map text to meaningful insights capable of responsing to written commands. For instance, typing in a request and the system providing you with the required data.
+- Chatbots: Heavily used for businesses such as customer services. If you type in "Hello", the NLP program analyses the text and will reply "Greetings!". NLP is used to map text to meaningful insights capable of responding to written commands. For instance, typing in a request and the system providing you with the required data.
 - Sentiment Analysis: Here NLP identifies and classifies the emotions within a text using text analysis methods. For instance, understanding the reviews for a restaurant and whether they are positive or negative.
 - Creditworthiness Assessment: A.I. algorithms analyse text and provide credit scores as predictive analytics for banks. Banks use alternative data sets for scoring potential borrowers, for instance, social media posts, internet activity, and online behaviour. This takes the following process:
     - Mining the web for information on potential customers.
     - Analysing the data and providing assessments of the customers creditworthiness.
     - Banks use trained datasets that are prelabelled indicating the level of risk for a customer.
 - Hiring and Recruitment: NLP is changing the way HR operate. Traditionally, recruiters need to review thousands of CV's for a single job post which can takes hours and hours of navigating emails. NLP can support this process by analysing candidate reports and scoring them against standard datasets. This provides indications for top candidates, removing bias and increasing diversity.
-- Healthcare: Medical professionals and institutions now communicate with patients electronically. For example via email, online forms with symptoms and online video consultations. Despite the already overwhelming amount of medical terms and medications pharmicists have to keep track of, in a global world language barriers add more complexity to this hurdle. NLP has been proven to assist in the healthcare sector. For instance, researchers from the UNiversity of Alabama found that NLP identification of reportable cancer cases was 22.6% more accurate than the manual review of electronic health records (EHR). NLP helps extracts useful data from EHRs and even give EHRs indications and alters to prevent human errors. In other words, NLP helps with increasing acccuracy.
+- Healthcare: Medical professionals and institutions now communicate with patients electronically. For example via email, online forms with symptoms and online video consultations. Despite the already overwhelming amount of medical terms and medications pharmacists have to keep track of, in a global world language barriers add more complexity to this hurdle. NLP has been proven to assist in the healthcare sector. For instance, researchers from the University of Alabama found that NLP identification of reportable cancer cases was 22.6% more accurate than the manual review of electronic health records (EHR). NLP helps extract useful data from EHRs and even give EHRs indications and alters to prevent human errors. In other words, NLP helps with increasing acccuracy.
 
 NLP uses a variety of data including:
+
 - Structure data:
     - Data that has been organised and includes a clear data model.
     - Data in relational databases that represents table with rows and columns (SQL).
@@ -94,6 +95,7 @@ NLP uses a variety of data including:
     - Mining unstructured data provides new insights and uncovers unknown information hidden in data. We can detect patterns and trends, and relationships and connection of unrelated data.
 
 NLP is about user generated information:
+
 - Emails
 - Word processing documents
 - Presentations
