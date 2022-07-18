@@ -59,7 +59,7 @@ NLP uses a Corpus as the basis of its analysis.
 Below is a basic outline of an NLP task:
 
 - Preparing the text data for analysis.
-- Creating word dictionaries of words and frequencies.
+- Creating dictionaries of words and frequencies.
 - Feature extraction process.
 - Training a classifier to predict the class of new emails.
 
@@ -104,8 +104,6 @@ NLP is about user generated information:
 - Social media posts
 
 **NLTK:** The Natural Language Toolkit has the most common tools for NLP. Using NLTK we can build Python programs to work with human language data. Huge collection of datasets and corpra and lexical resources. The NLTK library provides us with almost all the tools we need to analyse text.
-
-**Note:** We will be using Google Colaboratory (Colab) for running Python programs.
 
 ### Python Refresher
 
@@ -342,4 +340,17 @@ text1.similar("affection")
 text1.collocations()
 ```
 
+### Summary
+
+In the section, we covered:
+
+- Natural Language Processing (NLP) and the basic concepts behind it.
+- NLP and datasets by focusing on textual data.
+- How to build NLP pipelines to analyse text in series of steps.
+- We reviewed Python and some fundamental aspects.
+- We introduced the Python Natural Language Toolkit (NLTK):
+    - We ran some basic analytics.
+    - We developed our first pipeline.
+
+## Section 2: Natural Language Processing piplelines for text analysis
 
