@@ -371,8 +371,17 @@ In this section we will cover:
 - A corpus is a collection of texts using in machine learning tasks.
     - Data is usually labelled and presented in a way to assist other NLP tasks.
 - NLTP provides a selection of corpora for us to explore.
-- In the previous section, we used predefined texts using the following code
+- In the previous section, we used predefined texts using the following code:
 ```
 from book import *
 ```
 
+### Using the Gutenberg Corpus
+
+- The project Gutenberg electronic archive contains 25,000 free electronic books.
+- Let us work with the Gutenberg corpus and load the NLTK package:
+```
+import nltk
+nltk.download('gutenberg')
+nltk.corpus.gutenberg.fileids()
+```
