@@ -458,3 +458,25 @@ len(set(text5))
 ```
 - Although this corpus has 45010 words and punctuation symbols, there are only 6066 unique words.
 
+### NLTK Simple Statistics
+
+- Let us develop a small program to find the 20 most frequent words of the Chat corpus.
+- A frequency distribution diagram will help us to find the frequent words:
+```
+fdist1 = FreqDist(text5)
+fdist1.plot(20, cumulative=True)
+```
+- Let us use the dispersion_plot method. This reveals patterns in the word positions. Each stripe represents an instance of a word, and each row represents the entire text.
+```
+text5.dispersion_plot(['chat','JOIN','Player'])
+```
+
+ ### NLTK fine grained selection 
+ 
+- Let us look for long words, for example, words with a length of 15 characters or more for *text9: The Man Who Was Thursday by G . K . Chesterton 1908*.
+```
+words = [word for word in set(text1) if len(word)>15]
+sorted(words)
+```
+- Surprisingly, there are only two words: 'incomprehensible' and 'undenominational'.
+- 
