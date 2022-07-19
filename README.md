@@ -398,4 +398,26 @@ hamlet = nltk.corpus.gutenberg.words('shakespeare-hamlet.txt')
 hamlet_len = len(hamlet)
 ```
 - The above will print 37,360 words.
+- Let us use the cocordance method (from the previous section).
+```
+hamlet = nltk.Text(hamlet)
+hamlet.concordance('King')
+```
 
+### Counting words using NLTK and a corpus
+
+- Let us use some basic methods for some fundamental analytics:
+    - Count the characters of a text using the raw() method.
+```
+len(nltk.corpus.gutenberg.raw('shakespeare-hamlet.txt')
+```
+    - Count the number of words using the words() method.
+```
+len(nltk.corpus.gutenberg.words('shakespeare-hamlet.txt')
+```
+    - Count the number of sentences using the sents() method.
+```
+len(nltk.corpus.gutenberg.sents('shakespeare-hamlet.txt')
+```
+
+**Note:** The sents() method will require us to download the punkt file as discussed in Module 1.
