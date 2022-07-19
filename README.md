@@ -548,3 +548,9 @@ print(len(text6))
 print(len(set(text6)))
 ```
 - This will print 2166.
+
+### NLP Pipeline
+
+- An NLP pipeline is a set of steps that allow us to perform basic analytics and build up a natural understanding software.
+- Let's create a pipeline to break the following text found on the below website apart:
+    - https://en.wikipedia.org/wiki/Athens
