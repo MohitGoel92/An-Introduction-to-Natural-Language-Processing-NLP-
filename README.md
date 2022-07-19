@@ -407,15 +407,15 @@ hamlet.concordance('King')
 ### Counting words using NLTK and a corpus
 
 - Let us use some basic methods for some fundamental analytics:
-    - Count the characters of a text using the raw() method.
+- Count the characters of a text using the raw() method.
 ```
 len(nltk.corpus.gutenberg.raw('shakespeare-hamlet.txt')
 ```
-    - Count the number of words using the words() method.
+- Count the number of words using the words() method.
 ```
 len(nltk.corpus.gutenberg.words('shakespeare-hamlet.txt')
 ```
-    - Count the number of sentences using the sents() method.
+- Count the number of sentences using the sents() method.
 ```
 len(nltk.corpus.gutenberg.sents('shakespeare-hamlet.txt')
 ```
