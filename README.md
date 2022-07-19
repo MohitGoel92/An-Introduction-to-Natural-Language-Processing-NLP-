@@ -354,3 +354,25 @@ In the section, we covered:
 
 ## Section 2: Natural Language Processing piplelines for text analysis
 
+In this section we will cover:
+
+- Introduction to Neural Language Processing corpa.
+    - Gutenberg, Brown, Reuters, Inaugural, ... etc.
+- Working with raw text.
+    - Regular expressions with Python regex library.
+- Building an NLP pipeline.
+- Word segmentation for different languages.
+- Introducing SpaCy library.
+- Developing an NLP Pipeline with Python.
+
+### Introduction to NLP Corpora
+
+- NLP programs heavily or linguistic datasets knows as **corpora**.
+- A corpus is a collection of texts using in machine learning tasks.
+    - Data is usually labelled and presented in a way to assist other NLP tasks.
+- NLTP provides a selection of corpora for us to explore.
+- In the previous section, we used predefined texts using the following code
+```
+from book import *
+```
+
