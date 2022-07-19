@@ -421,3 +421,17 @@ len(nltk.corpus.gutenberg.sents('shakespeare-hamlet.txt')
 ```
 
 **Note:** The sents() method will require us to download the punkt file as discussed in Module 1.
+
+- NLTK provides all these important methods for text analytics, although more advanced tasks may require to develop custom code.
+- A common task is also to count the amount of vocabulary used in a file.
+- In this case we extract all the words, then transform the words to a lower case list, and finally extract a set of the list.
+- Converting data into a set can help us remove the duplicate values:
+```
+len(set([word.lower() for word in nltk.corpus.gutenberg.words('shakespeare-hamlet.txt')]))
+```
+- By analysing the data we conclude that the text includes 37,360 words, of which 4716 are unique words or punctuation symbols.
+- Let us count the longest sentence in the book called Shakespeare Hamlet.
+```
+max([len(s) for s in nltk.corpus.gutenberg.sents('shakespeare-hamlet.txt')])
+```
+- It seems that the longest sentence contains 174 characters.
