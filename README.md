@@ -522,3 +522,19 @@ AUNCELOT : Idiom ! CONCORDE : No , I feel fine , actually , sir . LAUNCELOT :
 ing sense . [ clap clap clap ] And I feel sure that the merger -- er , the uni
  s not quite dead . HERBERT : No , I feel much better . FATHER : You fell out 
 ```
+- Use the similar method to extract words with a similar range of context with the word *person*, using *text5: Chat Corpus*:
+```
+text5.similar('person')
+```
+- This will print:
+```
+name u back boys day time way case list flavour end top truth sound
+diary rights balad border price foothills
+```
+- Use the collocations method to extract phrases that are often used with another phrase in a way that sounds correct to people, Use *text6: Monty Python and the Holy Grail*.
+```
+BLACK KNIGHT; clop clop; HEAD KNIGHT; mumble mumble; Holy Grail;
+squeak squeak; FRENCH GUARD; saw saw; Sir Robin; Run away; CARTOON
+CHARACTER; King Arthur; Iesu domine; Pie Iesu; DEAD PERSON; Round
+Table; clap clap; OLD MAN; dramatic chord; dona eis
+```
