@@ -385,3 +385,17 @@ import nltk
 nltk.download('gutenberg')
 nltk.corpus.gutenberg.fileids()
 ```
+
+### Using the Gutenberg Corpus (txt files)
+
+- We can start working with the shakespeare-hamlet.txt corpus and try to run some simple analytics.
+- similarly, we can open any txt text and use NLTK to prepare it for analytics.
+```
+hamlet = nltk.corpus.gutenberg.words('shakespeare-hamlet.txt')
+```
+- The code loads the hamlet text as a Python list so its quite easy to run simple Python commands, such as len() method to extract the length of the text (words).
+```
+hamlet_len = len(hamlet)
+```
+- The above will print 37,360 words.
+
