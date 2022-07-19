@@ -435,3 +435,26 @@ len(set([word.lower() for word in nltk.corpus.gutenberg.words('shakespeare-hamle
 max([len(s) for s in nltk.corpus.gutenberg.sents('shakespeare-hamlet.txt')])
 ```
 - It seems that the longest sentence contains 174 characters.
+
+### Counting Vocabulary
+
+- One of the most commons tasks is to count the words of a natural language text.
+- Let us use *text5: Chat Corpus*
+```
+import nltk
+nltk.download('book')
+from nltk.book import *
+len(text5)
+```
+- This corpus has 45,010 words and punctuation symbols. These are known as *tokens*.
+- We can extract the vocabulary of a text using a set datastructure. We can also sort it in order to get the data organised in alphabetical order.
+```
+sorted(set(text5))
+```
+- This command will print a list of all the vocabulary used in the chat corpus.
+- Let us count how many unique words and punctuation symbols exist in out dataset.
+```
+len(set(text5))
+```
+- Although this corpus has 45010 words and punctuation symbols, there are only 6066 unique words.
+
