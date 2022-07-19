@@ -291,7 +291,6 @@ print(word_freq)
 
 - NLTK comes with many corpora, trained models ... etc
 - In our case, we need to use the word_tokenize Python method, that in turn requires the pre-trained Punkt tokenizer.
-- 
 
 ```
 import nltk
@@ -479,4 +478,47 @@ words = [word for word in set(text1) if len(word)>15]
 sorted(words)
 ```
 - Surprisingly, there are only two words: 'incomprehensible' and 'undenominational'.
-- 
+
+### Running NLTK tasks
+
+- Let's start working with the NLTK library.
+- The following code will download a book collection that we can use as our dataset for learning NLP.
+```
+# The following script will download the books in our notebook for us to access
+import nltk
+nltk.download('book')
+from nltk.book import *
+```
+**Note:** This code was previously used above but was not formely introduced until this section.
+
+- We just downloaded a selection of texts, let's run the texts() script to see the book list:
+```
+texts()
+```
+- The above will print:
+```
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
+```
+- NLTK is a powerful language with a selection of tools to analyse data.
+- Use the *concordance* method to search for the context that the word *feel* appears in *text6: Monty Python and the Holy Grail*:
+```
+text6.concordance('feel')
+```
+- The above will print:
+```
+Displaying 6 of 6 matches:
+I can ' t take him . DEAD PERSON : I feel fine ! CUSTOMER : Well , do us a fav
+can do ? DEAD PERSON : [ singing ] I feel happy ... I feel happy . [ whop ] CU
+SON : [ singing ] I feel happy ... I feel happy . [ whop ] CUSTOMER : Ah , tha
+AUNCELOT : Idiom ! CONCORDE : No , I feel fine , actually , sir . LAUNCELOT : 
+ing sense . [ clap clap clap ] And I feel sure that the merger -- er , the uni
+ s not quite dead . HERBERT : No , I feel much better . FATHER : You fell out 
+```
