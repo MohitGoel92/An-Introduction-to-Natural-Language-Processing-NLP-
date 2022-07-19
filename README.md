@@ -538,3 +538,13 @@ squeak squeak; FRENCH GUARD; saw saw; Sir Robin; Run away; CARTOON
 CHARACTER; King Arthur; Iesu domine; Pie Iesu; DEAD PERSON; Round
 Table; clap clap; OLD MAN; dramatic chord; dona eis
 ```
+- Let's count how many words are in *text6: Monty Python and the Holy Grail*.
+```
+print(len(text6))
+```
+- This will print 16,967.
+- Count how many unique words and punctuation symbols exist in *text6: Monty Python and the Holy Grail*:
+```
+print(len(set(text6)))
+```
+- This will print 2166.
