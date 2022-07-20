@@ -554,3 +554,39 @@ print(len(set(text6)))
 - An NLP pipeline is a set of steps that allow us to perform basic analytics and build up a natural understanding software.
 - Let's create a pipeline to break the following text found on the below website apart:
     - https://en.wikipedia.org/wiki/Athens
+
+### Step 1: Segmentation
+
+- Firstly, we break the text into sentences using the punctuation mark, so we can have the following:
+    - Athens is the capital city of Greece.
+    - Athens dominates and is the capital of the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years.
+    - Classical Athens was a powerful city-state.
+- Sentence segmentation allows computers to process text easily in comparison the whole text.
+- Modern NLP pipelines use more sophisticated way of segmentation, so to make data more easy to work with.
+
+### Step 2: Word Tokenisation
+
+- The next step is to break the sentences into words we can process one at a time. For instance, "Athens is the capital and largest city of Greece", becomes, ""Athens","is","the","capital","and","largest","city","of","Greece"".
+- English tokenisation is quite easy, as we can split the text whenever there is a space.
+- The punctuation mark has a meaning (indicated at the end of the sentence) so we will need to keep it as a token.
+
+### Step 3: Predicting Parts of Speech (POS) for Tokens
+
+- Next step is to look for the part of speech of each token including:
+    - Nouns, verbs, adjectives, adverbs, pronouns, prepositions, conjunctions, interjections ... etc.
+- By understanding the structure of the sentence and the role of each word we can understand the meaning and the concept about the text.
+- We can use a pre-trained part of speech model to classify words, for example:
+    - Input -> Word: Athens surrounding words are "is" and "classic".
+    - Part of speech classification model
+    - Output: "Proper_Noun"
+- This model is based on statistics, and it does not consider the meaning of the words.
+- Extracting the POS we can start getting some basic understanding of the meaning of our sentence.
+- For example, the nouns are:
+    - Capital, City, Athens.
+    - Athens is a proper noun, as it's a name used for the place (person or organisation).
+    - Athens: PROPN, is: AUX, the: DET, capital: NOUN, and: CCONJ, largest: ADJ, city: NOUN, of: ADP, Greece: PROPN.
+
+### Step 4: Text Lemmatisation
+
+- All languages appear in various formats and forms.
+- Let's 
