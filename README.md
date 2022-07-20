@@ -618,6 +618,27 @@ print(len(set(text6)))
 - This will help us figure out how all the words in our sentence relate to each other.
 - This process is depicted by the diagram below:
 
-
 <p align="center"> <img width="650" src= "/Diagrams/1.png"> </p>
 
+### Step 7: Names Entity Recognition (NER)
+
+- NER seeks to locate and classify name entities mentioned in unstructured text into pre-defined categories such as person names, organisations, locations, medical codes, time expressions, quantities, monetary values, percentages, ... etc.
+- Let us see how a NER model transforms our text:
+- *Athens (GPE)* is the capital and largest city of *Greece (GPE)*.
+- The goal of NER is to identify and label key nouns with real-world concepts that they represent.
+- In our case, an NLP model will be able to identify a GPE feature:
+    - GPE is a Geopolitical entity, for example, countries, cities, and states.
+- NER features include peoples' names, organisations, product names, dates and times, amounts of money, event, ... etc.
+
+### Step 8: Coreference resolution
+
+- This is the last step of our NLP pipeline.
+- Using Coreference resolution we can identify parts of speech that are related with each other, especially those related with named entities.
+- Let's examine the following example:
+    - Athens is the capital and the largest city of Greece. It dominates the Attica region.
+- Using Coreference resolution we can transform the text to the following:
+    - *Athens* is the capital and the largest city of Greece. *It* dominates the Attica region.
+    - *Athens* is the capital and the largest city of Greece. *Athens* dominates the Attica region.
+- Coreference resolution is a challenging task and one of the most difficult steps in a pipeline. But recent research in deep learning has started making it highly effective.
+- A common implementation of the coreference resolution is using neural networks.
+- A good example is the https://huggingface.co/ where we can easily visualise our text and identify the relationship and similarities between words.
