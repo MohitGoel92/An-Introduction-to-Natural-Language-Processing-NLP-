@@ -616,3 +616,7 @@ print(len(set(text6)))
 
 - The goal is to build a tree that assigns a single parent word to each word in a sentence.
 - This will help us figure out how all the words in our sentence relate to each other.
+- This process is depicted by the diagram below:
+
+<p align="center"> <img width="500" src= "/Diagrams/1.png"> </p>
+
