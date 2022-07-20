@@ -619,5 +619,5 @@ print(len(set(text6)))
 - This process is depicted by the diagram below:
 
 
-<p align="center"> <img width="500" src= "/Diagrams/1.png"> </p>
+<p align="center"> <img width="650" src= "/Diagrams/1.png"> </p>
 
