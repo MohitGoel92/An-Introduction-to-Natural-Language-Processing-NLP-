@@ -589,4 +589,30 @@ print(len(set(text6)))
 ### Step 4: Text Lemmatisation
 
 - All languages appear in various formats and forms.
-- Let's 
+- Let's examine the following sentences:
+    - I bought a ball.
+    - I bought two balls.
+- Both sentences have a noun but using two different inflections.
+- When working with data it's helpful to know the base form, so words with a similar meaning or concept can be identified.
+- Lemmatisation refers to transforming verbs, nouns ... etc, to their roots.
+- In our case, both sentences become:
+    - I bought a ball -> I [buy] a [ball]
+    - I bought two balls -> I [buy] a [ball]
+- Let us examine how the lemmatisation works for out text:
+    - Athens is the capital and largest city in Greece.
+- A lemmatisation process will provide us the unconjugated form as follows:
+- Athens: PROPN, is: AUX, the: DET, capital: NOUN, and: CCONJ, largest: ADJ, city: NOUN, of: ADP, Greece: PROPN.
+
+### Step 5: Identifying Stop Words
+
+- Next step is to identify the stop words or what we usually call filler words. For instance, "and", "the", "a", ... etc.
+- Stop words removing allows us to isolate the important meaning of a text and remove the noise of unnecessary data.
+- This is a common practice when we do statistics for NLP.
+- Let us examine how our sentence is transformed after this step:
+    - Input text: ["Athens","is","the","capital","and","largest","city","of","Greece","."]
+    - Output text: ["Athens","capital","largest","city","Greece","."]. This is similar to speed reading, where we extract the required information and memorise key facts.
+
+### Step 6: Dependency Parsing
+
+- The goal is to build a tree that assigns a single parent word to each word in a sentence.
+- This will help us figure out how all the words in our sentence relate to each other.
