@@ -366,8 +366,8 @@ In this section we will cover:
 
 ### Introduction to NLP Corpora
 
-- NLP programs heavily or linguistic datasets knows as **corpora**.
-- A corpus is a collection of texts using in machine learning tasks.
+- NLP programs heavy or linguistic datasets knows as **corpora**.
+- A corpus is a collection of texts used in machine learning tasks.
     - Data is usually labelled and presented in a way to assist other NLP tasks.
 - NLTP provides a selection of corpora for us to explore.
 - In the previous section, we used predefined texts using the following code:
@@ -405,7 +405,8 @@ hamlet.concordance('King')
 
 ### Counting words using NLTK and a corpus
 
-- Let us use some basic methods for some fundamental analytics:
+- Let us use some basic methods for some fundamental analytics.
+
 - Count the characters of a text using the raw() method.
 ```
 len(nltk.corpus.gutenberg.raw('shakespeare-hamlet.txt')
@@ -437,7 +438,7 @@ max([len(s) for s in nltk.corpus.gutenberg.sents('shakespeare-hamlet.txt')])
 
 ### Counting Vocabulary
 
-- One of the most commons tasks is to count the words of a natural language text.
+- One of the most common tasks is to count the words of a natural language text.
 - Let us use *text5: Chat Corpus*
 ```
 import nltk
@@ -455,7 +456,7 @@ sorted(set(text5))
 ```
 len(set(text5))
 ```
-- Although this corpus has 45010 words and punctuation symbols, there are only 6066 unique words.
+- Although this corpus has 45,010 words and punctuation symbols, there are only 6,066 unique words.
 
 ### NLTK Simple Statistics
 
@@ -547,12 +548,12 @@ print(len(text6))
 ```
 print(len(set(text6)))
 ```
-- This will print 2166.
+- This will print 2,166.
 
 ### NLP Pipeline
 
 - An NLP pipeline is a set of steps that allow us to perform basic analytics and build up a natural understanding software.
-- Let's create a pipeline to break the following text found on the below website apart:
+- Let's create a pipeline to break apart the following text found on the below website:
     - https://en.wikipedia.org/wiki/Athens
 
 ### Step 1: Segmentation
@@ -561,8 +562,8 @@ print(len(set(text6)))
     - Athens is the capital city of Greece.
     - Athens dominates and is the capital of the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years.
     - Classical Athens was a powerful city-state.
-- Sentence segmentation allows computers to process text easily in comparison the whole text.
-- Modern NLP pipelines use more sophisticated way of segmentation, so to make data more easy to work with.
+- Sentence segmentation allows computers to process text easily in comparison to the whole text.
+- Modern NLP pipelines use more sophisticated ways of segmentation, in order to make data more easy to work with.
 
 ### Step 2: Word Tokenisation
 
@@ -628,7 +629,7 @@ print(len(set(text6)))
 - The goal of NER is to identify and label key nouns with real-world concepts that they represent.
 - In our case, an NLP model will be able to identify a GPE feature:
     - GPE is a Geopolitical entity, for example, countries, cities, and states.
-- NER features include peoples' names, organisations, product names, dates and times, amounts of money, event, ... etc.
+- NER features include peoples' names, organisations, product names, dates and times, amounts of money, events, ... etc.
 
 ### Step 8: Coreference resolution
 
