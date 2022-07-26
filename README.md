@@ -724,4 +724,43 @@ for m in modals:
 ```
 
 - As expected, "will" is one of the most used words, showing that people talking about future ideas of hobbies.
-- 
+
+### Working with the Reuters corpus
+
+- Reuters corpus contains 10,788 news documents with a total number of 1.3 million words.
+- The news have been classified by topics.
+- There are 90 topics grouped into two sets:
+    - Training set: The dataset we use to train an algorithm or model so it can accurately predict your income.
+    - Testing set: The dataset to test the accuracy of a model using the training set.
+- The following code downloads the Reuters corpus and shows the various categories:
+```
+import nltk
+from nltk.corpus import reuters
+nltk.download('reuters')
+retuers.categories()
+```
+
+### Working with the Inaugural corpus
+
+- Inaugural corpus is a collection of 55 texts, each text represents a presidential address.
+- The following code demonstrates how to extract the Inaugural files:
+```
+from nltk.corpus import inaugural
+nltk.download('inaugural')
+inaugural.fileids()
+```
+
+### Annotated Corpora
+
+- Text corpora include linguistic annotations:
+    - Named entities
+    - Syntactic structures
+    - POS
+
+- Examples include:
+    - Brown Corpus: 15 genres, 1.15M words, tagged, categorised
+    - Genesis Corpus: 6 texts, 200k words, 6 languages
+    - Gutneberg (selections): 18 texts, 2M words
+    - Inaugural Address Corpus: US Presedentual Inaugural Addresses (1789-present)
+    - Reuters Corpus: 1.3M words, 10k news documents, categorised
+
