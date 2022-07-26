@@ -599,7 +599,7 @@ print(len(set(text6)))
 - In our case, both sentences become:
     - I bought a ball -> I [buy] a [ball]
     - I bought two balls -> I [buy] a [ball]
-- Let us examine how the lemmatisation works for out text:
+- Let us examine how the lemmatisation works for our text:
     - Athens is the capital and largest city in Greece.
 - A lemmatisation process will provide us the unconjugated form as follows:
 - Athens: PROPN, is: AUX, the: DET, capital: NOUN, and: CCONJ, largest: ADJ, city: NOUN, of: ADP, Greece: PROPN.
