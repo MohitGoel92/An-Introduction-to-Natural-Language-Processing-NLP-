@@ -657,3 +657,71 @@ print(len(set(text6)))
     - 6.) Dependency Parsing
     - 7.) Name entity recognition
     - 8.) Coreference resolution
+
+### Working with informal text using the Webtext corpus
+
+- If we want to work with less formal text then the Guttenberg corpus, we can use the Webtext.
+    - It includes text from forums, conversations, advertisements, ... etc.
+    - Let us export the list using the following command:
+```
+from nltk.corpus import webtext
+[id for id in webtext.fileids()]
+```
+
+- This will produce the following result:
+```
+['firefox.txt',
+ 'grail.txt',
+ 'overheard.txt',
+ 'pirates.txt',
+ 'singles.txt',
+ 'wine.txt']
+```
+
+ - Let's examine the pirates.txt file (Pirates of the Carribean: Dead man's chest!)
+```
+webtext.raw('pirates.txt')
+```
+
+- Let's run some basic analytics. In this example, we will count the occurence of each word in the pirates.txt file, excluding any stop words.
+```
+import nltk
+nltk.download('stopwords')
+allWords = nltk.tokenize.word_tokenize(webtext.raw('pirates.txt'))
+allWordDist = nltk.FreqDist(w.lower() for w in allWords)
+stopwords = nltk.corpus.stopwords.words('english')
+allWordExceptStopDist = nltk.FreqDist(w.lower() for w in allWords if w not in stopwords)
+```
+
+- We can search now how many times a word "chest" appears in the dataset.
+- There are 52 instances of this word in the text.
+```
+allWordExceptStopDist['chest']
+```
+
+- Let us run some basic analytics to find the top 10 words that occur more often in the dataset.
+```
+from collections import Counter
+k = Counter(dic)
+# Finding the 10 highest values
+high = k.most_common(10)
+for i in high:
+    print(i[0], " :", i[1], " ")
+```
+
+### Working with the Brown corpus
+
+- Brown corpus is an important dataset, usually used to study systemicatic differences between genres (stylistics).
+- We can run a simple example to compare genres in their usage of modal verbs.
+
+```
+from nltk.corpus import brown
+hobbies_text = brown.words(categories = 'hobbies')
+fdist = nltk.FreqDist([w.lower() for w in hobbies_text])
+modals = ['can','could','may','might','must','will']
+for m in modals:
+    print(m+": ", fdist[m])
+```
+
+- As expected, "will" is one of the most used words, showing that people talking about future ideas of hobbies.
+- 
