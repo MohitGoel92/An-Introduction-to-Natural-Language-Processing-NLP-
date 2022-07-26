@@ -643,3 +643,17 @@ print(len(set(text6)))
 - Coreference resolution is a challenging task and one of the most difficult steps in a pipeline. But recent research in deep learning has started making it highly effective.
 - A common implementation of the coreference resolution is using neural networks.
 - A good example is the https://huggingface.co/ where we can easily visualise our text and identify the relationship and similarities between words.
+
+### NLP pipeline summary
+
+- There are different ways of developing pipelines, and we will develop our pipelines using Python libraries.
+- Different use cases require different NLP pipelines.
+- However, the most common steps include the below:
+    - 1.) Segmentation
+    - 2.) Tokenisation
+    - 3.) Part of speech
+    - 4.) Lemmatisation
+    - 5.) Stop words identification
+    - 6.) Dependency Parsing
+    - 7.) Name entity recognition
+    - 8.) Coreference resolution
