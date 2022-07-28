@@ -764,3 +764,33 @@ inaugural.fileids()
     - Inaugural Address Corpus: US Presedentual Inaugural Addresses (1789-present)
     - Reuters Corpus: 1.3M words, 10k news documents, categorised
 
+### Working with Corpora in other languages
+
+- There is a selection of languages supported by NLP, however, it might require some extra work in order to manipulate character codings.
+- The following downloads and uses Spanish corpus:
+```
+nltk.download('cess_esp')
+nltk.corpus.cess_esp.words()
+```
+
+- In this section, we have discussed different corpora including:
+    - Gutenberg
+    - Brown
+    - Reuters
+    - Inaugural
+
+- Some of the corpora have an internal structure:
+    - The Gutenberg is an isolated corpus with no particular organisation.
+    - The Brown is categorised, for example by genre.
+    - The Reuters is categorised, for example by news topic.
+    - Inaugural represents data over time.
+
+### Lexical resources
+
+- A lexicon, or lexical resource, is a collection of words and/or phrases along with associated information such as part of speech and sense definitions.
+- Lexical resources are secondary to texts, and are usually created and enriched with the help of texts.
+- A lexical entry includes Headword (aka lemma), POS information, and Definitions.
+- Two distinct words having the same spelling are called homonyms.
+- Let us see the following example of homonyms:
+    - "saw" (headword, or lemma) -> [verb] -> past tense of see (sense definition, or gloss)
+    - "saw" (lexical entry) -> [noun] (part of speech or lexical category) -> cutting instrument
