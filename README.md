@@ -834,3 +834,32 @@ wn.synsets('train')
 ```
 
 - The word "train" has different meanings (synonym words or lemmas).
+- We can extract definitions using the following code:
+```
+wn.synset('train.n.01').definitions()
+```
+- The word "train" has different meanings (synonym words or lemmas).
+```
+wn.synset('train.n.01').examples()
+```
+- Finally, let us see some hyponyms to extract more information from WordNet:
+```
+wn.synset('train.n.01').hyponyms()
+```
+
+### Introduction into Spacy
+
+- Spacy is an NLP library specifically designed to help you run fast and efficient NLP tasks. It provides a selection of visualisations that can help us analyse natural language data.
+- The following code renders a dependency model for a given text.
+```
+import spacy
+from spacy import displacy
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("Athens is the capital and largest city of Geece.")
+from spacy import displacy
+displacy.render(doc, style='dep', juptyer=True, options={'distance':90})
+```
+
+- The above will produce the following output:
+
+<p align="center"> <img width="650" src= "/Diagrams/spacy.png"> </p>
