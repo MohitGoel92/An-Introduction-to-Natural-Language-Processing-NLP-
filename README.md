@@ -794,3 +794,43 @@ nltk.corpus.cess_esp.words()
 - Let us see the following example of homonyms:
     - "saw" (headword, or lemma) -> [verb] -> past tense of see (sense definition, or gloss)
     - "saw" (lexical entry) -> [noun] (part of speech or lexical category) -> cutting instrument
+
+### Wordlist Corpora
+
+- The simplest kind of lexicon with a sorted list of words.
+- Very often we use wordlist to extract stopwords. It's a common task to identify stopwords to help us reduce the noise in our data. The following shows the stopwords in English:
+```
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+stopwords.words('english')
+```
+
+- The following shows the stopwords in French:
+```
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+stopwords.words('french')
+```
+
+### Wordnet Corpora
+
+- WordNet is a large lexical database of English.
+- Nouns, verbs, adjectives and adverbs are grouped into sets of cognitive synonyms (synsets), each expressing a distinct concept.
+- WordNet superficially resembles a thesaurus, in that it groups words together based on their meanings.
+- However, there are some important distinctions. First, WordNet interlinks not just word forms - string or letters - but specific senses of words.
+- NLTK includes the English WordNet with 155.287 words and 117.659 synonym sets:
+```
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+stopwords.words('french')
+```
+
+- Let's examine the following code:
+```
+import nltk
+from nltk.corpus import wordnet as wn
+nltk.download('wordnet')
+wn.synsets('train')
+```
+
+- The word "train" has different meanings (synonym words or lemmas).
