@@ -366,8 +366,8 @@ In this section we will cover:
 
 ### Introduction to NLP Corpora
 
-- NLP programs heavy or linguistic datasets knows as **corpora**.
-- A corpus is a collection of texts used in machine learning tasks.
+- NLP programs heavy or linguistic datasets are known as **corpora**.
+- A **corpus** is a collection of texts used in machine learning tasks.
     - Data is usually labelled and presented in a way to assist other NLP tasks.
 - NLTP provides a selection of corpora for us to explore.
 - In the previous section, we used predefined texts using the following code:
