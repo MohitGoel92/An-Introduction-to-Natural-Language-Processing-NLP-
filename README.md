@@ -863,3 +863,11 @@ displacy.render(doc, style='dep', juptyer=True, options={'distance':90})
 - The above will produce the following output:
 
 <p align="center"> <img width="650" src= "/Diagrams/spacy.png"> </p>
+
+### Summary
+
+- Introduction to Natural Language Processing Corpora.
+- Working with raw text.
+- Introduction to Natural Language Processing theory.
+- Word segmentation for different languages.
+- Introduction to SpaCy library.
