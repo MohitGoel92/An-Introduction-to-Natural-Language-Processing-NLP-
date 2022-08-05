@@ -930,3 +930,12 @@ re.sub("\s", "%20", text)
     - |: Either or "falls|stays"
     - (): Capture and group
 
+- Let's see a more detailed example where we can extract a URL from a given text:
+```
+import re
+text = """Web browsers request pages from web servers by using a URL. The URL is the address of a web page, like: https://www.w3schools.com."""
+urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',text)
+print("Original string: ", text)
+print("Urls: ", urls)
+```
+
