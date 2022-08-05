@@ -943,7 +943,33 @@ print("Urls: ", urls)
 
 - Let's develop a program to find the 20 most frequent words of text1: Moby Dick by Herman Melville 1851.
 ```
+import nltk
+nltk.download('book')
+from nltk.book import *
+texts()
 fdist1 = FreqDist(text1)
 fdist1.plot(20, cumulative=True)
 ```
 
+- Let us use the dispersion_plot method to reveal patterns in words positions. We will look for the words "chat", "JOIN", and "Player" using the text5 Corpus:
+```
+text5.dispersion_plot(["chat","JOIN","Player"])
+```
+
+### NLP Theory and Word Representations
+
+- How to analyse text data in order to identify semantics of texts?
+- Bag of words:
+    - Using one hot encoding: Each word in the vocabulary is represented by one bit position in a huge vector.
+- Let's examine the following text:
+- My name is Bob, Hello world!
+- In this vocabulary the word "name" can be represented as the following: 0 1 0 0 0 ...
+- Processing text using this method does not utilise any contextual information.
+- Word vectors:
+    - Stores each word in a n-dimensional space where each point is represented by a vector of a specific dimensionality. Each dimension is a projection to a different axis.
+- Let us examine the following text:
+- My name is Bob, Hello world!
+- In the vocabulary, the word "name" can be represented as the following: 0.3, 0.5, 0.02, ...
+- Processing text using this method utilises contextual information.
+
+### 
