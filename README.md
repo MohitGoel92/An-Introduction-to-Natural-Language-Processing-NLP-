@@ -890,6 +890,8 @@ In this section, we will cover:
 - Regular expressions are the essence of data cleaning for textual data. They can help to solve parsing problems.
 - Python has a built-in package called *re*, and makes regular expressions easy to use. Let us see a simple example:
 ```
+import nltk
+from nltk import re
 text = "Mary is at home"
 re.findall("Mary", text)
 ```
@@ -903,3 +905,28 @@ re.search("^Mary.*home$", text)
 ```
 re.split("\s", "Mary is at home")
 ```
+- We can also replace white space characters with another character or number, for different tasks:
+    - When you see "%20," it represents a space in an encoded URL.
+    - The following code replaces a space with the "%20".
+```
+text = "Mary is at home"
+re.sub("\s", "%20", text)
+```
+- Let us see the functions of the Python "re" module:
+    - findall: Returns a list containing all matches.
+    - search: Returns a Match object if there is a match anywhere in the string.
+    - split: Returns a list where the string has been split at each match.
+    - sub: Replaces one or many matches with a string.
+
+- Metacharacters are characters with a special meaning, for instance:
+    - []: A set of characters "[a-n]"
+    - \: Signals a special sequence (can also be used to escape special characters) "\d"
+    - .: Any character (except newline character) "he..o"
+    - ^: Starts with "^hello"
+    - $: Ends with "world$"
+    - *: Zero or more occurences "aix*"
+    - +: One or more occurences "aix+"
+    - {}: Exactly the specified number of occurrences "a|{2}"
+    - |: Either or "falls|stays"
+    - (): Capture and group
+
