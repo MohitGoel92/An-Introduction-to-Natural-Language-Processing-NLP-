@@ -871,3 +871,35 @@ displacy.render(doc, style='dep', juptyer=True, options={'distance':90})
 - Introduction to Natural Language Processing theory.
 - Word segmentation for different languages.
 - Introduction to SpaCy library.
+
+## Section 3: Information Extraction for NLP Tasks
+
+In this section, we will cover:
+
+- Introduction to information extraction (Regular Expressions).
+- NLP visualisations.
+- Bag of words and word vectors.
+- Chunking and chinking.
+- Word tagging.
+- N-grams.
+
+### Python Regular Expressions
+
+- A regular expression (**regex**) is a sequence of characters that define a search pattern.
+- Usually such patterns are used by string searching algorithms for "find" or "find and replace" operations on strings, or for input validation. For example, when a user inputs a telephone number.
+- Regular expressions are the essence of data cleaning for textual data. They can help to solve parsing problems.
+- Python has a built-in package called *re*, and makes regular expressions easy to use. Let us see a simple example:
+```
+text = "Mary is at home"
+re.findall("Mary", text)
+```
+- The above code will print: ['Mary']
+- Regular expressions are very powerful, let's see an example. Let's search the string to see if it starts with "Mary" and ends with "home".
+```
+text = "Mary is at home"
+re.search("^Mary.*home$", text)
+```
+- Tokenisation is provided by NLTK, although we can still use regex to split at each white-space character:
+```
+re.split("\s", "Mary is at home")
+```
