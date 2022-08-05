@@ -939,3 +939,11 @@ print("Original string: ", text)
 print("Urls: ", urls)
 ```
 
+### NLP Visualisations
+
+- Let's develop a program to find the 20 most frequent words of text1: Moby Dick by Herman Melville 1851.
+```
+fdist1 = FreqDist(text1)
+fdist1.plot(20, cumulative=True)
+```
+
