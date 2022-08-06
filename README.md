@@ -1063,3 +1063,39 @@ for i, txt in enumerate(labels):
 
 ### Information Extraction and N-Grams
 
+- Information extraction is about finding and understanding parts of the text.
+- This aims to produce a structured representation of relevant information. For instance, relations and extract knowledge.
+- Goals:
+    - Organise information in a way that it's useful to people.
+    - Provide automated information finding.
+    - Put information in a semantic context so computer algorithms can use it.
+- Example of information extraction:
+    - Identification of information from modern applications.
+        - Web indexing: mail programs extracting times, dates, phone numbers, events.
+
+- **Chunking:** Chunking is a process of extracting phrases from unstructured text.
+- The basic technique we will use for entity detection is chunking, which segments and labels multi-token sequences.
+    - Chunking means grouping of words/tokens into chunks.
+    - Personal pronouns (PRP), Optional Determiner (DT), Adjective (JJ), Noun (NN), the Noun Phrase (NP).
+    - Examples: We(PRP/NP) saw(VBD) the(DT/NP) yellow(JJ/NP) dog(NN/NP)
+- Noun phrase chunking, or NP-chunking:
+    - We search for chunks corresponding to individual noun phrases.
+- Chunking example:
+```
+sentence = [("the", "DT"), ("little","JJ"), ("white", "JJ"), ("ball", "NN"), ("fall","VBD"), ("in", "IN"), ("the", "DT"), ("lake", "NN")]
+grammar = "NP: {<DT>?<JJ>*<NN>}"
+cp = nltk.RegexpParser(grammar)
+result = cp.parse(sentence)
+print(result)
+```
+
+- **Tagging:** A part-of-speech tagger, or POS-tagger, processes a sequence of words, and attaches a part of speech tag to each word.
+
+```
+import nltk
+from nltk.tokenize import word_tokenize
+nltk.download('averaged_perceptron_tagger')
+text = word_tokenizer("New York City is the most populous city in the United States.")
+nltk.pos_tag(text)
+```
+
