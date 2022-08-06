@@ -976,7 +976,7 @@ text5.dispersion_plot(["chat","JOIN","Player"])
 
 - A method to extract features from a text, for example, a text document.
 - The features are useful for training machine learning algorithms to create a vocabulary of unique words as a training set.
-- Bad of words is a collection of words:
+- Bag of words is a collection of words:
     - It represents a sentence with word counts.
     - It does not use the order of the words.
 - This method is with:
@@ -989,10 +989,34 @@ text5.dispersion_plot(["chat","JOIN","Player"])
     - 2.) Represent the sentence as a collection of words:
         - ["Mary","likes","to","watch","movies".,"Stelios","likes","movies","too."]
     - 3.) Remove multiple occurences of the word and use the word count to represent this:
-        - {"Mary":1, "likes":2, "to":1, "watch":1, "movies":", "stelios":1, "too":1}
+        - {"Mary":1, "likes":2, "to":1, "watch":1, "movies":2, "stelios":1, "too":1}
     - 4.) The length of the vector will always be equal to vocabulary size. In this case the vector length is 7.
         - Represent the original sentences in a vector that is initialised with all zeros:
             - [0,0,0,0,0,0,0,0,0,0]
         - So our text "Mary likes to watch movies. Stelios likes movies too." is transformed as:
             - [1,2,1,1,2,1,1,0,0,0]
-            - The word "likes" appears in the second position and appears two times.
+            - The word "likes" appears in the second position and appears twice.
+- The bad of words model only considers whether a known word occurs in a document or not.
+- It does not care about meaning, context, and order in which they appear.
+- How can we use bag of words in a real word case?
+    - For instance, comparing two documents for analysing the similarities and differences.
+    - We use Bag of Words as, the greater the similarities of the words in the two documents, the more resemblant the documents can be.
+- What are the limitations?
+    - Semantic meaning:
+        - Does not consider the meaning of the word in the document.
+        - In other words, the context is ignored.
+    - Vector size:
+        - A big document could result in an extremely large vector, thus requiring a lot of computational time.
+
+### Word Vectors
+
+- Word vectors come to solve the bag of words problems.
+- They are simply vectors of numbers that represent the context and meaning of a word.
+- Bag of words does not capture relationships of text. For instance, we as humans understand that the words "dog" and "cat" refer to animals and maybe their context is of households pets.
+- A word vector is an array of real numbers and each point captures a dimension of the word's meaning. Semantically similar words have similar vectors.
+- Word vectors represent points, thus we can do mathematical operations.
+- We can add and subtract vectors to "calculate" the meaning of operations.
+    - For example: King - Man + Woman = Queen
+- The numbers in the word vector represent the word's distributed weight across dimensions.
+- Each dimension represents a meaning and the word's numerical weight on that dimension captures the closeness of its association with and to that meaning.
+
