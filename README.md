@@ -924,7 +924,7 @@ re.sub("\s", "%20", text)
     - .: Any character (except newline character) "he..o"
     - ^: Starts with "^hello"
     - $: Ends with "world$"
-    - *: Zero or more occurences "aix*"
+    - *****: Zero or more occurences "aix*****"
     - +: One or more occurences "aix+"
     - {}: Exactly the specified number of occurrences "a|{2}"
     - |: Either or "falls|stays"
