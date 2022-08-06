@@ -985,14 +985,14 @@ text5.dispersion_plot(["chat","JOIN","Player"])
     - Document classifications.
 - Bag of words example:
     - 1.) Let's consider the following sentence:
-            - "Mary likes to watch movies. Stelios likes movies too."
+        - "Mary likes to watch movies. Stelios likes movies too."
     - 2.) Represent the sentence as a collection of words:
-            - ["Mary","likes","to","watch","movies".,"Stelios","likes","movies","too."]
+        - ["Mary","likes","to","watch","movies".,"Stelios","likes","movies","too."]
     - 3.) Remove multiple occurences of the word and use the word count to represent this:
-            - {"Mary":1, "likes":2, "to":1, "watch":1, "movies":", "stelios":1, "too":1}
+        - {"Mary":1, "likes":2, "to":1, "watch":1, "movies":", "stelios":1, "too":1}
     - 4.) The length of the vector will always be equal to vocabulary size. In this case the vector length is 7.
-            - Represent the original sentences in a vector that is initialised with all zeros:
-                - [0,0,0,0,0,0,0,0,0,0]
-            - So our text "Mary likes to watch movies. Stelios likes movies too." is transformed as:
-                - [1,2,1,1,2,1,1,0,0,0]
-                - The word "likes" appears in the second position and appears two times.
+        - Represent the original sentences in a vector that is initialised with all zeros:
+            - [0,0,0,0,0,0,0,0,0,0]
+        - So our text "Mary likes to watch movies. Stelios likes movies too." is transformed as:
+            - [1,2,1,1,2,1,1,0,0,0]
+            - The word "likes" appears in the second position and appears two times.
