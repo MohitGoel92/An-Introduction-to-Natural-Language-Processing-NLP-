@@ -1029,7 +1029,7 @@ In the figure above, we are imagining that each dimension captures a clearly def
 Similar words are mapped together in the vector space. Notice how close "cat" and "dog" are to "pet," how clustered "elephant," "lion," and "tiger" are, and how descriptive words also cluster together. What is also interesting here is how closely the words "wild," "zoo," and "domesticated" map to one another. It makes sense given that they are words that are frequently used to describe animals, but highlights the amazing power of word vectors.
 
 - Word vectors example: Animals
-```
+
 | Animal Name   | Cuteness (0-100) | Size (0-100) |
 | ------------- | ---------------- | ------------ |
 | Kitten        | 95               | 15           |
@@ -1040,11 +1040,3 @@ Similar words are mapped together in the vector space. Notice how close "cat" an
 | Horse         | 50               | 50           |
 | Puppy         | 90               | 20           |
 | Elephant      | 65               | 90           |
-```
-
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
