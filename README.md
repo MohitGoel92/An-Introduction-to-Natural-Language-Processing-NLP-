@@ -1043,6 +1043,7 @@ Similar words are mapped together in the vector space. Notice how close "cat" an
 
 ```
 Let us assume that we preprocessed the data and we prepare it for rendering
+import matplotlib.pyplot as plot
 x = [95,80,90,2,65,5,50,25]
 y = [15,8,20,15,90,40,50,2]
 labels = ['kitten','hamster','puppy','lobster','elephant','crocodile','horse','goldfish']
@@ -1051,3 +1052,11 @@ ax.scatter(x,y)
 for i, txt in enumerate(labels):
     ax.annotate(txt, (x[i], y[i]))
 ```
+
+- Word similarity:
+    - Identify similar words in terms of their context.
+    - Easy to perform stemming (saw becomes see).
+- Build sentiment lexicon for sentiment analysis.
+    - Use the cosine distance to compare words.
+- Coreference resolution:
+    - Find multiple contexts.
