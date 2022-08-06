@@ -1021,3 +1021,8 @@ text5.dispersion_plot(["chat","JOIN","Player"])
 - Each dimension represents a meaning and the word's numerical weight on that dimension captures the closeness of its association with and to that meaning.
 
 <p align="center"> <img width="650" src= "/Diagrams/WV.png"> </p>
+
+In the figure above, we are imagining that each dimension captures a clearly defined meaning. For example, if you imagine that the first dimension represents the meaning or concept of "animal," then each word's weight on that dimension represents how closely it relates to that concept.
+
+<p align="center"> <img width="650" src= "/Diagrams/WV1.png"> </p>
+
