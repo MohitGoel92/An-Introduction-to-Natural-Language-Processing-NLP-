@@ -1026,3 +1026,5 @@ In the figure above, we are imagining that each dimension captures a clearly def
 
 <p align="center"> <img width="650" src= "/Diagrams/WV1.png"> </p>
 
+Similar words are mapped together in the vector space. Notice how close "cat" and "dog" are to "pet," how clustered "elephant," "lion," and "tiger" are, and how descriptive words also cluster together.
+
