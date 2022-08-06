@@ -1031,7 +1031,7 @@ Similar words are mapped together in the vector space. Notice how close "cat" an
 - Word vectors example: Animals
 ```
 | Animal Name   | Cuteness (0-100) | Size (0-100) |
-|---------------|------------------|--------------|
+| ------------- | ---------------- | ------------ |
 | Kitten        | 95               | 15           |
 | Hamster       | 80               | 8            |
 | Crocodile     | 5                | 40           |
@@ -1040,4 +1040,11 @@ Similar words are mapped together in the vector space. Notice how close "cat" an
 | Horse         | 50               | 50           |
 | Puppy         | 90               | 20           |
 | Elephant      | 65               | 90           |
+```
+
+```
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 ```
