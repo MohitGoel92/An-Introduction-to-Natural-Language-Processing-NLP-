@@ -972,4 +972,27 @@ text5.dispersion_plot(["chat","JOIN","Player"])
 - In the vocabulary, the word "name" can be represented as the following: 0.3, 0.5, 0.02, ...
 - Processing text using this method utilises contextual information.
 
-### 
+### Bag of Words
+
+- A method to extract features from a text, for example, a text document.
+- The features are useful for training machine learning algorithms to create a vocabulary of unique words as a training set.
+- Bad of words is a collection of words:
+    - It represents a sentence with word counts.
+    - It does not use the order of the words.
+- This method is with:
+    - Natural language processing.
+    - Information retrieval from documents.
+    - Document classifications.
+- Bag of words example:
+    - 1.) Let's consider the following sentence:
+            - "Mary likes to watch movies. Stelios likes movies too."
+    - 2.) Represent the sentence as a collection of words:
+            - ["Mary","likes","to","watch","movies".,"Stelios","likes","movies","too."]
+    - 3.) Remove multiple occurences of the word and use the word count to represent this:
+            - {"Mary":1, "likes":2, "to":1, "watch":1, "movies":", "stelios":1, "too":1}
+    - 4.) The length of the vector will always be equal to vocabulary size. In this case the vector length is 7.
+            - Represent the original sentences in a vector that is initialised with all zeros:
+                - [0,0,0,0,0,0,0,0,0,0]
+            - So our text "Mary likes to watch movies. Stelios likes movies too." is transformed as:
+                - [1,2,1,1,2,1,1,0,0,0]
+                - The word "likes" appears in the second position and appears two times.
