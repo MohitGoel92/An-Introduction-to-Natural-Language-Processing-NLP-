@@ -1042,9 +1042,9 @@ Similar words are mapped together in the vector space. Notice how close "cat" an
 | Elephant      | 65               | 90           |
 ```
 
-```
+
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
-```
+
