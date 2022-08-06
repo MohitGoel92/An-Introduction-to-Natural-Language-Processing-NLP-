@@ -1060,3 +1060,6 @@ for i, txt in enumerate(labels):
     - Use the cosine distance to compare words.
 - Coreference resolution:
     - Find multiple contexts.
+
+### Information Extraction and N-Grams
+
