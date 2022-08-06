@@ -1020,3 +1020,4 @@ text5.dispersion_plot(["chat","JOIN","Player"])
 - The numbers in the word vector represent the word's distributed weight across dimensions.
 - Each dimension represents a meaning and the word's numerical weight on that dimension captures the closeness of its association with and to that meaning.
 
+<p align="center"> <img width="650" src= "/Diagrams/WV.png"> </p>
