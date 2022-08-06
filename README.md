@@ -1099,3 +1099,47 @@ text = word_tokenizer("New York City is the most populous city in the United Sta
 nltk.pos_tag(text)
 ```
 
+- Several of the corpora included with NLTK have been tagged for their part-of-speech.
+- Here's an example using the Brown Corpus:
+```
+nltk.corpus.brown.tagged_words()
+```
+
+- **N-grams:** N-grams are a sequence of N words.
+- Examples:
+    - "New York" is a 2-gram.
+    - "High School" is a 2-gram.
+    - "Natural Language Processing" is a 3-gram.
+    - "The Lord of the Rings" is a 5-gram.
+- N-grams are very helpful and useful.
+    - We can assign a probability to the occurence of an N-gram or the probability of a word occuring next in a sequence of words.
+    - It can help us to:
+        - Decide which N-grams can be chunked together to form single entities.
+        - Make next word predictions (e.g. predictive texts).
+        - Spelling error corrections (e.g. spell checker).
+- An N-gram model predicts the occurence of a word based on the occurence of its N-1 previous words.
+- So here we are answering the question - how far back in the history of a sequence of words should we go to predict the next word?
+- For instance, a bigram model (N=2) predicts the occurence of a word given only its previous word (as N-1 = 1 in this case). Similarly, a trigram model (N=3) predicts the occurence of a word based on its previous two words (as N-1=2 in this case).
+- 2-gram example:
+    - Let us assume we have the following data:
+    - Thank you
+    - Thanks for sharing!
+    - Thank you NHS
+    - Thank you Mary!
+- To find the probability of the word "you" following the words "thank", we can write this as P(you|thank) which is a conditional probability.
+- This becomes equal to:
+    - = (No. of times "thank you" occurs)/(No. of times "thank" occurs)
+    - =3/4 (or 0.75)
+- We can say with a probability of 75% that whenever "Thank" occurs, it will be followed by "you".
+- Let's see an example of bigram generation using the NLTK library.
+```
+import nltk
+list(nltk.bigrams(['more','is','said','than','done']))
+```
+- The collocations() method will present us a list of the most common collocations of text4: Inaugural Address Corpus.
+```
+import nltk
+nltk.download().text4.collocations()
+```
+
+## 
