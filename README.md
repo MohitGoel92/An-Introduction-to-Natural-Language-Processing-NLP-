@@ -1142,4 +1142,14 @@ import nltk
 nltk.download().text4.collocations()
 ```
 
-## 
+### Summary
+
+In this section, we discussed:
+
+- Introduction to information extraction.
+- NLP visualisations.
+- Bag of words and word vectors.
+- Chunking and chinking.
+- Word tagging.
+- N-grams.
+
