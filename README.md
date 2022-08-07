@@ -1141,7 +1141,6 @@ list(nltk.bigrams(['more','is','said','than','done']))
 import nltk
 nltk.download().text4.collocations()
 ```
-
 ### Summary
 
 In this section, we discussed:
@@ -1152,4 +1151,3 @@ In this section, we discussed:
 - Chunking and chinking.
 - Word tagging.
 - N-grams.
-
