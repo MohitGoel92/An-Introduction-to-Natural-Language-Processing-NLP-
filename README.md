@@ -1151,3 +1151,38 @@ In this section, we discussed:
 - Chunking and chinking.
 - Word tagging.
 - N-grams.
+
+## Section 4: Applications of NLP, Libraries, and Methods
+
+In this section, we will cover:
+
+- NLP statistical analysis and measures:
+    - Term frequency - Inverse document frequency
+- Machine Learning and NLP
+- Classification:
+    - Naive Bayes
+    - Decision Trees
+- Natural language generation
+
+### NLP Statistical Analysis: TF-IDF
+
+- TF-IDF stands for *Term Frequency-Inverse Document Frequency*.
+    - The tf-idf weight is a weight often used in information retrieval and text mining.
+- This is a technique to quantify a word in documents, we generally compute a weight to each word which signifies the importance of the word in the document and corpus.
+- This weight is a statistical measure used to evaluate how important a word is to a document in a collection or corpus.
+- The importance increases proportionally to the number of times a word appears in the document but is offset by the frequency of the word in the corpus.
+- Variations of the TF-IDF weighting scheme are often used by search engines as a central tool in scoring and ranking a document's relevance given a user query.
+- TF-IDF can be used for stop-words filtering in various subject fields including text summarisation and classification.
+- Typically, the TF-IDF weight is composed by two terms:
+    - The first computes the normalised Term Frequency (TF), also known as the number of times a word appears in a document, divided by the total number of words in that document.
+        - TF(f) = (Number of times term t appears in a document)/(Total number of terms in the document).
+    - The second term is the Inverse Document Frequency (IDF), computed as a logarithm of the number of documents in the corpus divided by the number of documents where the specific term appears.
+        - IDF(t) = log_e(Total number of documents/Number of documents with term t in it)
+- Let's see an example:
+- Consider a document containing 100 words, wherein the word cat appears 3 times.
+- The term frequency (tf) for cat is then (3/100) = 0.03
+- Now, assume we have 10 million documents and the word cat appears in one thousand of these.
+- Then, the inverse document frequency (idf) is calculated as
+    - Log(10,000,000/1,000) = 4
+- Therefore, the TF-IDF weight is the product of these quantites: 0.03 * 4 = 0.12
+- 
