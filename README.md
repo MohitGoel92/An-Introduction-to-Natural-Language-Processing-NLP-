@@ -1185,4 +1185,39 @@ In this section, we will cover:
 - Then, the inverse document frequency (idf) is calculated as
     - Log(10,000,000/1,000) = 4
 - Therefore, the TF-IDF weight is the product of these quantites: 0.03 * 4 = 0.12
-- 
+
+### Frequency Matrix
+
+- Let's create a frequency matrix function in Python using some NLP tools.
+- A term-frequency matrix is constructed from the dictionary and the document set by counting the number of occurences of each dictionary word in each document.
+- We will create a mini NLP pipeline to:
+    - a) Identify stop words and exclude it from our analysis.
+    - b) Transform text to lower case so we can easily group it together.
+    - c) Use the stems (roots of the words).
+    - d) Develop a dictionary to store the data.
+- Let's examine the following code:
+```
+def create_frequency_matrix(sentences):
+    frequency_matrix={}
+    stopwords = set(stopwords.words("english"))
+    ps = PorterStemmer()
+    
+    for sent in sentences:
+        freq_table={}
+        words = word_tokenizer(sent)
+        for word in words:
+            word = ps.stem(word.lower())
+            if word in stopWords:
+                continue
+            if word in freq_table: freq_table[word] +=1
+            else: freq_table[word] = 1
+        frequency_matrix[sent[:15]] = freq_table
+    return frequency_matrix
+```
+
+- Let's run an example:
+```
+Text = """A term-frequency matrix is constructed from the dictionary and the document set by counting the number of occurences of each dictionary word in each document."""
+print(create_frequency_matrix(sent_tokenizer(text)))
+```
+
