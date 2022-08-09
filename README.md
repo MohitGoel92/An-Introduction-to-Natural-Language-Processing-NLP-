@@ -1221,3 +1221,42 @@ Text = """A term-frequency matrix is constructed from the dictionary and the doc
 print(create_frequency_matrix(sent_tokenizer(text)))
 ```
 
+### Building a Pipeline for TF-IDF
+
+Building a pipeline for TF-IDF looks like the below:
+
+1.) Tokenize the sentences.
+2.) Create a frequency matrix.
+3.) Calculate the term frequency
+    - Words having the same frequency, have the same TF score.
+4.) Create a table for documents per words.
+5.) Calculate IDF matrix.
+6.) Calculate the TF-IDF matrix
+    - Multiplying the values from both the matrices.
+7.) Score the sentences.
+8.) Identify a threshold.
+9.) Genenerate a summary.
+
+### NLP: Classifying Text
+
+- NLP iS about detecting patterns in text.
+- For instance, detecting the frequency of certain terms in a text, or detecting words ending with a specific ending, such as "ed", as this indicates past tense.
+- Classifying text according to some basic criteria is part of the machine learning approach.
+
+### Machine Learning Recap
+
+- Supervised learning:
+    - Learn by training and by using examples of which we already know the desired output. For instance, Spam and Ham emails, that are already labelled.
+    - There are two categories of supervised learning:
+        - Classification: Discrete variable, e.g. spam or ham.
+        - Regression: Continuous output, e.g. price of a house over time.
+- Unsupervised learning:
+    - There is no labelled output, we aim to learn from the data by identifying relationships.
+        - We have a set of handwritten text and we want to organise in groups.
+        - Identify anomalies in credit card usage.
+- Reinforcement learning:
+    - Learn by doing, where an agent (software) interacts with the environment and evaluates the results of this interaction.
+    - Ths environment gives positive or negative feedback back to the agent.
+- Classification is the task of predicting the class (or category) label of a given input.
+    - Examples: Classifying whether an email is spam or not, or classifying a handwritten character to the most probably alphabet.
+- 
