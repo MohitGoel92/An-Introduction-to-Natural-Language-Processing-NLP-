@@ -1329,3 +1329,24 @@ https://github.com/MohitGoel92/Predicting-Customer-Purchases
 
 https://github.com/MohitGoel92/Classification
 
+### Introduction to Scikit Learn
+
+- What is Scikit learn?
+    - An extension of the SciPy (Scientific Python)
+    - Provide a selection of algorithms of machine learning tasks
+        - Supervised
+        - Unsupervised
+        - Open source
+        - One of the best machine learning frameworks
+        - For more information, please visit: https://scikit-learn.org/stable
+        - We will use the GaussianNB library for our task.
+
+- Let us use a simple dataset using the following variables:
+```
+weather = ['Sunny','Sunny','Overcast','Rainy','Rainy','Rainy','Overcast','Sunny','Sunny','Rainy','Sunny','Overcast','Overcast','Rainy']
+temp = ['Hot','Hot','Hot','Mild','Cool','Cool','Cool','Mild','Cool','Mild','Mild','Mild','Hot','Mild']
+play = ['No','No','Yes','Yes','Yes','No','Yes','No','Yes','Yes','Yes','Yes','Yes','No']
+```
+
+- We need to convert these string labels into numbers for example: 'Overcast','Rainy','Sunny' as 0,1,2. This is achieved by using the LabelEncoder():
+```
