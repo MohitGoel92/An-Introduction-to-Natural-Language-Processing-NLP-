@@ -1350,3 +1350,68 @@ play = ['No','No','Yes','Yes','Yes','No','Yes','No','Yes','Yes','Yes','Yes','Yes
 
 - We need to convert these string labels into numbers for example: 'Overcast','Rainy','Sunny' as 0,1,2. This is achieved by using the LabelEncoder():
 ```
+from sklearn import preprocessing
+le = preprocessing.LabelEncoder()
+weather_encoded = le.fit_transform(weather)
+print(weather_encoded)
+```
+
+- The above will print: [2 2 0 1 1 1 0 2 2 1 2 0 0 1]
+- Let's encode temperature and label columns into numbers:
+```
+temp_encoded = le.fit_transform(temp) # temp stands for temperature
+label = le.fit_transform(play)
+```
+
+- Now combine both the features (weather and temp) in a single variable (list of tuples):
+```
+features = list(zip(weather_encoded, temp_encoded))
+```
+
+- Now let's run our model:
+    - Create Naive Bayes classifier.
+    - Fit the dataset on the classifier.
+    - Perform a prediction:
+```
+from sklearn.naive_bayes import GaussianNB
+model = GaussianNB()
+model.fit(features,label)
+predicted = model.predict([[0,2]]) # 0:Overcast, 2:Mild
+print("Predicted Value:", predicted)
+```
+
+- This will print [1], indicating that the players can play.
+
+### Decision Tree Classifiers
+
+- A decision tree is a simple flowchart that selects labels for input values.
+- The flowchart consists of decision nodes, which check feature values, and leaf nodes, which assign labels.
+- To choose the label for an input value, we begin at the flowchart's initial decision node, known as its root node.
+- A typical example for decision tree classification is the Iris dataset:
+    - This is perhaps the best known database to be found in pattern recognition literature.
+    - The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant.
+    - The Iris dataset includes:
+        - Sepal length in cm
+        - Sepal width in cm
+        - Petal length in cm
+        - Petal width in cm
+        - Class: Iris Setosa, Iris Versicolour, or Iris Virginica.
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+iris = datasets.load_iris()
+X = iris.data[:, 2:]
+y = iris.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state =1, startify=y)
+clf_tree = DecisionTreeClassifier(criterion = 'gini', max_depth = 4, random_state=1)
+clf_tree.fit(X_train, y_train)
+```
+
+For more information on Decision Tree Classifier please see the following link: https://github.com/MohitGoel92/Classification
+
