@@ -1397,6 +1397,7 @@ print("Predicted Value:", predicted)
         - Petal width in cm
         - Class: Iris Setosa, Iris Versicolour, or Iris Virginica.
 ```
+pip install mlxtend
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -1411,7 +1412,42 @@ y = iris.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state =1, startify=y)
 clf_tree = DecisionTreeClassifier(criterion = 'gini', max_depth = 4, random_state=1)
 clf_tree.fit(X_train, y_train)
+
+from mlxtend.plotting import plot_decision_regions
+X_combined = np.vstack((X_train, X_test))
+y_combined = np.hstack((y_train, y_test))
+
+# The below code generates the diagram
+fig, ax = plt.subplots(figsize=(7,7))
+plot_decision_regions(X_combined, y_combined, clf=clf_tree)
+plt.xlabel('petal length [cm]')
+plt.ylabel('petal width [cm]')
+plt.legend(loc = 'upper left')
+plt.tight_layout()
+plt.show()
 ```
 
-For more information on Decision Tree Classifier please see the following link: https://github.com/MohitGoel92/Classification
+- For more information on Decision Tree Classifier please see the following link: https://github.com/MohitGoel92/Classification
+
+### Summary of NLP Classification
+
+- Modelling the linguistic data found in Corpora can help us understand linguistic patterns, and can be used to make predictions about new language data.
+- Supervised classifiers use labelled training corpora to build models that predict the label of an input based on specific features of that input.
+- Supervised classifiers can perform a wide variety of NLP tasks.
+- In Naive Bayes classifiers, each feature independently contributes to the decision of which label should be used.
+- Decision trees are automatically constructed tree-structured flowcharts that are used to assign labels to input values based on their features.
+
+### Natural Language Generation
+
+- Natural Language Generation (NLG) is the process of producing meaningful phrases and sentences in the form of natural language.
+- NLG is about generating narratives that explain or summarise data into a human-like manner.
+- Natural Language Understanding focuses on transforming data into structured data understandable to computers.
+- The NLG pipelines includes:
+    - 1.) Document planning: Develop an abstract document to outline the structure of the information.
+    - 2.) Microplanning: Generating expressions and word choice, this will create the specification.
+    - 3.) Realisation: Converting abstract to a text.
+- **Markov Chain**: A Markov chain aims to predict the next word in a sentence. It considers the current word and calculates the probability of the next word accordingly. An example of this is predictive texting on smartphones.
+- **Recurrent Neural Networks** use neural networks that mimic the behaviour of the human brain. RNNs pass each item of the sequence through a feedforward network and use the output of the model as input to the next item in the sequence, allowing the information in the previous step to be stored.
+- In each iteration, the model stores the previous words encountered in its memory and calculates the probability of the next word.
+- For each word in the dictionary, the model assigns a probability based on the previous word, selects the word with the highest probability and stores it in the memory.
 
