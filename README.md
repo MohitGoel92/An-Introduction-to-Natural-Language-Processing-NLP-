@@ -1452,3 +1452,14 @@ plt.show()
 - In each iteration, the model stores the previous words encountered in its memory and calculates the probability of the next word.
 - For each word in the dictionary, the model assigns a probability based on the previous word, selects the word with the highest probability and stores it in the memory.
 
+### Summary
+
+In this section, we discussed:
+
+- NLP statistical analysis and measures:
+    - Term frequency - Inverse document frequency.
+- Machine learning and NLP.
+- Classification:
+    - Naive Bayes
+    - Decision Trees
+- Natural language generation.
