@@ -1239,7 +1239,7 @@ Building a pipeline for TF-IDF looks like the below:
 
 ### NLP: Classifying Text
 
-- NLP iS about detecting patterns in text.
+- NLP is about detecting patterns in text.
 - For instance, detecting the frequency of certain terms in a text, or detecting words ending with a specific ending, such as "ed", as this indicates past tense.
 - Classifying text according to some basic criteria is part of the machine learning approach.
 
@@ -1307,7 +1307,7 @@ classifier.show_most_informative_features(5)
 
 ### Naive Bayes Classifiers
 
-- In the Naive Bayes classifier, every feature gets a say in determining which label should be assigned to a given value input value.
+- In the Naive Bayes classifier, every feature gets a say in determining which label should be assigned to a given input value.
 - To choose a label for an input value, the Naive Bayes classifier begins by calculating the prior probability of each label, which is determined by checking the frequency of each label in the training set.
 - We can calculate an expression for P(label|features), the probability that an input will have a particular label given that it has a particular set of features.
     - P(label|features) = P(features, label)/P(features)
@@ -1317,7 +1317,7 @@ classifier.show_most_informative_features(5)
 
 ### Naive Bayes Classifier Steps
 
-- Convert data into a set of a frequency table.
+- Convert data into a set of a frequency tables.
     - Organise the data into meaningful data structures.
 - Create a likelihood table.
     - To extract the probability of an entity.
@@ -1332,23 +1332,23 @@ https://github.com/MohitGoel92/Classification
 ### Introduction to Scikit Learn
 
 - What is Scikit learn?
-    - An extension of the SciPy (Scientific Python)
-    - Provide a selection of algorithms of machine learning tasks
+    - An extension of the SciPy (Scientific Python).
+    - To provide a selection of algorithms for machine learning tasks:
         - Supervised
         - Unsupervised
         - Open source
-        - One of the best machine learning frameworks
+        - One of the best machine learning frameworks.
         - For more information, please visit: https://scikit-learn.org/stable
         - We will use the GaussianNB library for our task.
 
-- Let us use a simple dataset using the following variables:
+- Let us observe a simple dataset using the following variables:
 ```
 weather = ['Sunny','Sunny','Overcast','Rainy','Rainy','Rainy','Overcast','Sunny','Sunny','Rainy','Sunny','Overcast','Overcast','Rainy']
 temp = ['Hot','Hot','Hot','Mild','Cool','Cool','Cool','Mild','Cool','Mild','Mild','Mild','Hot','Mild']
 play = ['No','No','Yes','Yes','Yes','No','Yes','No','Yes','Yes','Yes','Yes','Yes','No']
 ```
 
-- We need to convert these string labels into numbers for example: 'Overcast','Rainy','Sunny' as 0,1,2. This is achieved by using the LabelEncoder():
+- We need to convert these string labels into numbers, for example: 'Overcast','Rainy','Sunny' as 0,1,2 respectively. This is achieved by using the LabelEncoder():
 ```
 from sklearn import preprocessing
 le = preprocessing.LabelEncoder()
@@ -1375,7 +1375,7 @@ features = list(zip(weather_encoded, temp_encoded))
 ```
 from sklearn.naive_bayes import GaussianNB
 model = GaussianNB()
-model.fit(features,label)
+model.fit(features,label) # Using standard notations, this would be model.fit(X,y), where X = features and y = label.
 predicted = model.predict([[0,2]]) # 0:Overcast, 2:Mild
 print("Predicted Value:", predicted)
 ```
@@ -1396,6 +1396,7 @@ print("Predicted Value:", predicted)
         - Petal length in cm
         - Petal width in cm
         - Class: Iris Setosa, Iris Versicolour, or Iris Virginica.
+- The following code is an example of how this sort of workflow will look like. 
 ```
 pip install mlxtend
 import pandas as pd
