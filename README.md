@@ -1259,4 +1259,49 @@ Building a pipeline for TF-IDF looks like the below:
     - Ths environment gives positive or negative feedback back to the agent.
 - Classification is the task of predicting the class (or category) label of a given input.
     - Examples: Classifying whether an email is spam or not, or classifying a handwritten character to the most probably alphabet.
-- 
+
+### NLP and Supervised Classification
+
+- Supervised classification refers to building an NLP model that is based on a training corpora that is already labelled.
+- Let us see an example:
+- Male and female names have distinctive characteristics. For instance, names ending in *a*, *e*, and *i* are likely to be female, while names ending in *k*, *o*, *r*, *s*, and *t* are likely to be male. Let's create a program to identify the key features (that is the last letter of a name). The returned value is known as the feature set.
+```
+def gender_features(word):
+    return{'last_letter': word[-1]}
+gender_features('Jack')
+```
+- This will print {'last_letter':k}
+
+- NLTK provides a "names" library for us to use.
+- Let's create a list of examples and corresponding class labels.
+- Let's examine the following code that uses the NaiveBayesClassifier.
+```
+import nltk
+from nltk.corpus import names
+nltk.download('names')
+labeled_names = ([(name, 'male') for name in names.words('male.txt')] + [(name, 'female') for name in names.words('female.txt')])
+featuresets = [(gender_features(n), gender) for (n, gender) in labeled_names]
+train_set, test_set = featuresets[500:], featuresets[:500]
+classifier = nltk.NaiveBayesClassifier.train(train_set)
+```
+
+- Let's use our classifier to predict whether John is male or female.
+```
+classifier.classify(gender_features('John'))
+```
+
+- Let's use our classifier to predict whether John is male or female.
+```
+classifier.classify(gender_features('Eloise'))
+```
+
+- We can evalute the classifier to check its accuracy using the following code:
+```
+print(nltk.classify.accuracy(classifier, test_set))
+```
+
+- Let's examine the classifier to determine which features it found most effective for distinguishing the names' genders:
+```
+classifier.show_most_informative_features(5)
+```
+
