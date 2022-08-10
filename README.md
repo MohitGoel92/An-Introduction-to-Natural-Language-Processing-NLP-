@@ -1313,5 +1313,5 @@ classifier.show_most_informative_features(5)
     - P(label|features) = P(features, label)/P(features)
 - The formula below depicts this:
 
-<p align="center"> <img width="650" src= "/Diagrams/nb.png"> </p>
+<p align="center"> <img width="350" src= "/Diagrams/nb.png"> </p>
 
