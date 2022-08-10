@@ -1315,3 +1315,16 @@ classifier.show_most_informative_features(5)
 
 <p align="center"> <img width="350" src= "/Diagrams/nb.png"> </p>
 
+### Naive Bayes Classifier Steps
+
+- Convert data into a set of a frequency table.
+    - Organise the data into meaningful data structures.
+- Create a likelihood table.
+    - To extract the probability of an entity.
+- Calculate the posterior probability.
+
+For more information of classification and Naive Bayes, please see the below links:
+
+https://github.com/MohitGoel92/Predicting-Customer-Purchases
+https://github.com/MohitGoel92/Classification
+
