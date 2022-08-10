@@ -1305,3 +1305,13 @@ print(nltk.classify.accuracy(classifier, test_set))
 classifier.show_most_informative_features(5)
 ```
 
+### Naive Bayes Classifiers
+
+- In the Naive Bayes classifier, every feature gets a say in determining which label should be assigned to a given value input value.
+- To choose a label for an input value, the Naive Bayes classifier begins by calculating the prior probability of each label, which is determined by checking the frequency of each label in the training set.
+- We can calculate an expression for P(label|features), the probability that an input will have a particular label given that it has a particular set of features.
+    - P(label|features) = P(features, label)/P(features)
+- The formula below depicts this:
+
+<p align="center"> <img width="650" src= "/Diagrams/nb.png"> </p>
+
