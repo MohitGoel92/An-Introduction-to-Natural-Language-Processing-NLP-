@@ -1677,4 +1677,4 @@ plt.show()
 ```
 - The output of the below is:
 
-<p align="center"> <img width="650" src= "/Diagrams/wc.png"> </p>
+<p align="center"> <img width="450" src= "/Diagrams/wc.png"> </p>
