@@ -1463,3 +1463,24 @@ In this section, we discussed:
     - Naive Bayes
     - Decision Trees
 - Natural language generation.
+
+## Section 5
+
+In this section, we will discuss:
+
+- Sentiment analysis:
+    - Building advanced NLP pipelines.
+        - Download Twitter samples.
+        - Tokenisation.
+        - Stemming and lemmatisation.
+        - Cleaning the data with regex.
+        - Create a frequency matrix.
+        - Prepare the data for modelling.
+        - Dataset splitting: Positive and negative sentiments.
+        - Build the model using the Naive Bayes classifier.
+        - Testing the model and make predictions.
+- Word clouds.
+- Working on an NLP hands-on project.
+
+### Sentiment Analysis with Python and Genism
+
