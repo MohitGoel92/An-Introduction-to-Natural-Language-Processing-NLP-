@@ -1484,3 +1484,68 @@ In this section, we will discuss:
 
 ### Sentiment Analysis with Python and Genism
 
+- Sentiment analysis is a common NLP task, which involves classifying texts or parts of texts into a pre-defined sentiment.
+- We will use NLTK to analyse Twitter textual data.
+- We will build up a pipeline to clean and prepare our data, then we will train a model to classify tweets into positive or negative sentiments.
+- The pipeline steps are follows:
+    - Import NLTK and download the Twitter samples.
+    - Tokenisations.
+    - Stemming and lemmatisation.
+    - Cleaning the data.
+    - Create a frequency matrix.
+    - Prepare the data for modelling.
+    - Split the dataset according to Positive and Negative sentiments.
+    - Build the model using the Naive Bayes classifier.
+    - Test the model and make predictions using testing text.
+- As in step 1, let's download the Twitter samples that are available in the NLTK library:
+```
+import nltk
+nltk.download('twitter_samples')
+```
+
+- Let's download the samples that are available in the NLTK library.
+- The punkt module is a pre-trained model that helps us tokenise words and sentences.
+- The code imports three datasets from NLTK that countains various tweets to train and test the model:
+    - negative_tweets.json: 5000 tweets with negative sentiments.
+    - positive_tweets.json: 5000 tweets with positive sentiments.
+    - tweets.20150430-223406.json: 2000 tweets with no sentiments.
+- As in step 2, let's perform Tokenisation:
+```
+from nltk.corpus import twitter_samples
+nltk.download('punkt')
+positive_tweets = twitter_samples.strings('positive_tweets.json')
+negative_tweets = twitter_samples.strings('negative_tweets.json')
+text = twitter_samples.strings('tweets.20150430-223406.json')
+# This code tokenises the positive_tweets.json dataset
+tweet_tokens = twitter_samples.tokenized('positive_tweets.json')[0]
+```
+
+- As in step 3, let's perform the stemming and lemmatisation process
+```
+import nltk
+nltk.download('wordnet')
+nltk.download('averaged_perception_tagger')
+
+from nltk.tag import pos_tag
+from nltk.stem.wordnet import WordNetLemmatizer
+
+from nltk.tag import pos_tag
+from nltk.corpus import twitter_samples
+tweet_tokens = twitter_samples.tokenized('positive_tweets.json')
+
+print(pos_tag(tweet_tokenz[0]))
+def lemmatize_sentences(tokens):
+    lemmatizer = WordNetLemmatizer()
+    lemmatized_sentences = []
+    for word, tag in pos_tag(tokens):
+        if tag.startswith('NN'):
+            pos = 'n'
+        elif tag.startswith('VB'):
+            pos = 'v'
+        else:
+            pos = 'a'
+        lemmatized_sentence.append(lemmatizer.lemmatize(word,pos))
+     return lemmatized_sentence
+     
+print(lemmatize_sentence(tweet_tokens[0]))
+```
