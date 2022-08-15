@@ -1604,4 +1604,53 @@ freq_dist_pos = FreqDist(all_pos_words)
 print(freq_dist_pos.most_common(10))
 ```
 - The above will produce an output with the emotion entities.
-- 
+- As in step 6, let's prepare the data for modelling by changing the format of the cleaned data:
+```
+def get_tweets_for_model(cleaned_tokens_list):
+    for tweet_tokens in cleaned_tokens_list:
+        yield_dict([token, True] for token in tweet_tokens)
+        
+positive_tokens_for_model = get_tweets_for_model(positive_cleaned_tokens_list)
+negative_tokens_for_model = get_tweets_for_model(negative_cleaned_tokens_list)
+
+print(positive_cleaned_tokens_list)
+print(list(positive_tokens_for_model))
+```
+
+- As in step 7, let's perform data preparation and split the dataset according to Positive and Negative sentiments:
+```
+import random
+positive_dataset = [(tweet_dict, "Positive") for tweet_dict in positive_tokens_for_model]
+negative_dataset = [(tweet_dict, "Negative") for tweet_dict in negative_tokens_for_model]
+
+dataset = positive_dataset + negative_dataset
+
+random.shuffle(dataset)
+
+train_data = dataset[:7000]
+test_data = dataset[7000:]
+```
+
+- As is step 8, let's build the model using the Naive Bayes classifier:
+```
+from nltk import classify
+from nltk import NaiveBayesClassifier
+classifier = NaiveBayesClassifier.train(train_data)
+
+print("Accuracy is:", classify.accuracy(classifier, test_data))
+
+print(classifier.show_most_informative_features(10))
+```
+
+- The above will output the accuracy and most informative features.
+- As in step 9, let's test the model:
+```
+from nltk.tokenize import word_tokenize
+
+custom_tweet = "I ordered it :) and loved it."
+custom_tokens = remove_noise(word_tokenize(custom_tweet))
+
+print(classifier.classify(dict([token, True] for token in custom_tokens)))
+```
+- The above code will print "Positive".
+
