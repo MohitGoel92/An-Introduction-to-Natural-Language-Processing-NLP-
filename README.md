@@ -1553,4 +1553,39 @@ def lemmatize_sentences(tokens):
 print(lemmatize_sentence(tweet_tokens[0]))
 ```
 
-- 
+- Hyperlinks - All hyperlinks in Twitter are converted to the URL shortener t.co. Therefore, keeping them in the text processing would not add any value to the analysis.
+- Twitter handles in replies - These Twitter usernames are preceded be a @ symbol, which does not convey any meaning.
+- Punctuation and special characters - While these often provide context to textual data, this context is often difficult to process.
+- To remove hyperlinks, you need the first search for a substring that matches a URL starting with http:// or https://, followed by letters, numbers, or special characters.
+- Once a pattern is matched, the .sub() method replaces it with an empty string.
+- As in step 4, let's perform the cleaning of the data:
+```
+import re, string
+nltk.download('stopwords')
+
+def remove_noise(tweet_tokens, stop_words = ()):
+    cleaned_tokens = []
+    for token, tag in pos_tag(tweet_tokens):
+        token = re.sub('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+#]|[!*\(\),]|'\
+                       '(?:%[0-9a-fA-F][0-9a-fA-F]))+','',token)
+        token = re.sub("(@[A-Za-z0-9_]+)","",token)
+        if tag.startswith("NN"):
+            pos = 'n'
+        else:
+            pos = 'a'
+        lemmatizer = WordNetLemmatizer()
+        token = lemmatizer.lemmatize(token, pos)
+        
+        if len(token) > 0 and token not in string.punctuation and token.lower() not in stop_words:
+            cleaned_tokens.append(token.lower())
+    return cleaned_tokens
+positive_tweet_tokens = twitter_samples.tokenized('positive_tweets.json')
+negative_tweet_tokens = twitter_samples.tokenized('negative_tweets.json')
+positive_cleaned_tokens_list = []
+negative_cleaned_tokens_list = []
+for tokens in positive_tweet_tokens:
+    positive_cleaned_tokens_list.append(remove_noise(tokens, stop_words))
+for tokens in negative_tweet_tokens:
+    negative_cleaned_tokens_list.append(remove_noise(tokens, stop_words))
+```
+
