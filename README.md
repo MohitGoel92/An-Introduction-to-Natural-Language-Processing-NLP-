@@ -1654,3 +1654,27 @@ print(classifier.classify(dict([token, True] for token in custom_tokens)))
 ```
 - The above code will print "Positive".
 
+### Word Cloud
+
+- A word cloud is a figure representing the frequency of the importance of a word. The size of each word indicates its frequency or importance.
+- Let's run a simple example for the following text about London from Wikipedia:
+```
+text = """ London is the capital and largests city of England and the United Kingdom. [8][9] The city stands on the River Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea. London has been a major settlement for two millennia. Londinium was founded by the Romans. [10] The City of London, London's ancient core and financial centre - an area of just 1.12 square miles (2.9 km2) and colloquially known as the Square Mile - retains boundaries that closely follow its medieval limits. [11][12][13][14][15] [note 1] The adjacent City of Westminister is an Inner London borough and has for centuries been the location of much of the national government. Thirty one additional boroughs north and south of the river also comprise modern London. London is governed by the mayor of London and the London Assembly. [16][note 2][17]"""
+```
+- A word cloud is a figure representing the frequency of the importance of a word.
+- Let us run a simple example for the following text about London (extracted from Wikipedia):
+```
+pip install wordcloud
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+import matplotlib.pyplot as plt
+
+wordcloud = WordCloud(stopwords=STOPWORDS, background_color = 'white', max_words=300).generate(text)
+
+plt.clf()
+plt.imshow(wordcloud)
+plt.axis('off')
+plt.show()
+```
+- The output of the below is:
+
+<p align="center"> <img width="650" src= "/Diagrams/wc.png"> </p>
