@@ -1522,7 +1522,7 @@ text = twitter_samples.strings('tweets.20150430-223406.json')
 tweet_tokens = twitter_samples.tokenized('positive_tweets.json')[0]
 ```
 
-- As in step 3, let's perform the stemming and lemmatisation process
+- The code below imports the WordNet Lemmatiser class and initialises it to a variable, lemmatizer. The function lemmatize_sentence first gets the position tag of each token of a tweet. Within the if statement, if the tag starts with NN (noun), the token is assigned as a noun. similarly, if the tag starts with VB (Verb), the token is assigned to a verb. As in step 3, let's perform the stemming and lemmatisation process:
 ```
 import nltk
 nltk.download('wordnet')
@@ -1547,7 +1547,9 @@ def lemmatize_sentences(tokens):
         else:
             pos = 'a'
         lemmatized_sentence.append(lemmatizer.lemmatize(word,pos))
-     return lemmatized_sentence
+    return lemmatized_sentence
      
 print(lemmatize_sentence(tweet_tokens[0]))
 ```
+
+- 
