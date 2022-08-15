@@ -1678,3 +1678,32 @@ plt.show()
 - The output of the below is:
 
 <p align="center"> <img width="450" src= "/Diagrams/wc.png"> </p>
+
+### Topic Modelling and Gensim
+
+- Topic modelling is an unsupervised machine learning technique that's capable of scanning a set of documents, detecting word and phrase patterns within them, and automatically clustering word groups and similar expressions that best characterise a set of documents.
+- Gensim is a free Python library designed to automatically extract semantic topics. It provides libraries for high-quality topic models.
+- Gensim requires the words (tokens) to be converted to unique IDs.
+- We can create a dictionary from a paragraph of sentences, from a text file that contains multiple lines of text and from multiple such text files contained in a directory.
+```
+import gensim
+from gensim import corpora
+from pprint import pprint
+
+# How to create a dictionary from a list of sentences?
+documents = ["London is the capital and largest city of England and the United Kingdom. The city stands on the Riven Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea."]
+
+documents_2 = ["London is considered to be one of the world's most important global cities and has been called the world's most powerful, most desirable, most influential, most visited, most expensive, sustainable, most investment-friendly, and most-popular-for-work [29] city."]
+
+# Tokenize(split) the sentences into words
+texts = [[text for text in doc.split()] for doc in documents]
+
+# Create a dictionary
+dictionary = corpora.Dictionary(texts)
+
+# Get information about the dictionary
+print(dictionary)
+
+# The below command will extract the 30 unique words within the text
+print(dictionary.token2id)
+```
