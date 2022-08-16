@@ -1707,3 +1707,31 @@ print(dictionary)
 # The below command will extract the 30 unique words within the text
 print(dictionary.token2id)
 ```
+
+### Bag of Words and Gensim
+
+- A corpus object that contains the word id and its frequency in each document will look like the below:
+```
+from gensim.utils import simple_preprocess
+
+# List with 2 sentences
+my_docs = ["London is the capital and largest city of England, London is considered to be one of the world's most important global cities"]
+
+# Tokenise the docs
+tokenize_list = [simple_processes(doc) for doc in my_docs]
+
+# Create the Corpus
+mydict = corpora.Dictionary()
+mycorpus = [mydict.doc2bow(doc, allow_update=True) for doc in tokenized_list]
+pprint(mycorpus)
+```
+- The (0,1) in line 1 means, the word with id=0 appears once in the 1st document.
+- The (9,2) means the word with id 9 appears twice.
+
+### Summary
+
+In this section, we discussed:
+
+- Sentiment analysis and building advanced NLP pipelines.
+- Word clouds.
+- Working on an NLP hands-on project.
